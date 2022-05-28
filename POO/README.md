@@ -1,2 +1,2 @@
 # POO
-Essa pasta contém a aplicação Java.
+Essa pasta contém tudo relacionado com POO.

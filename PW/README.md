@@ -1,2 +1,2 @@
 # PW
-Essa pasta contém a aplicação HTML/CSS/JS.
+Essa pasta contém tudo relacionado com PW.
