@@ -15,7 +15,6 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "Avaliação_bab5200",
             "vmArgs": "--module-path 'lib' --add-modules javafx.controls,javafx.fxml"
         }
     ]
