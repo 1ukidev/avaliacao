@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.layout.Layer?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
+         <children>
+            <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" text="Ver registros" textFill="WHITE" />
+            <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" text="Fazer registro" textFill="WHITE" />
+            <ImageView fitHeight="65.0" fitWidth="70.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../icon%201.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" text="Ajuda" textFill="WHITE" />
+            <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="5.0" layoutY="8.0">
+               <image>
+                  <Image url="@icon%201.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="iconConfig" fitHeight="30.0" fitWidth="32.0" layoutX="554.0" layoutY="356.0">
+         <image>
+            <Image url="@gear-solid%201.png" />
+         </image>
+      </ImageView>
+      <Layer fx:id="img" layoutY="56.0" prefHeight="344.0" prefWidth="224.0" />
+      <Layer fx:id="form" layoutX="222.0" layoutY="58.0" prefHeight="344.0" prefWidth="377.0" style="-fx-border-width-left: 1px; -fx-border-color-left: black; -fx-border-style-left: solid;" />
+   </children>
+</AnchorPane>
