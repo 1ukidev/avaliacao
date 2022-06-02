@@ -13,9 +13,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage tela) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("view/PrimeiraTela.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/menuInicial.fxml"));
         Scene cena = new Scene(root);
         
+        tela.setResizable(false);
         tela.setScene(cena);
         tela.setTitle("Primeira janela");
         tela.show();

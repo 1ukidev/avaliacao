@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FazerRegistrosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.FazerRegistrosController">
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
             <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" text="Ver registros" textFill="WHITE" />
             <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" text="Fazer registro" textFill="WHITE" />
-            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" text="Ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" onAction="#mudarTela" text="Ajuda" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
