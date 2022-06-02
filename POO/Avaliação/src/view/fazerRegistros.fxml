@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.layout.Layer?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FazerRegistrosController">
    <children>
-      <Layer layoutY="59.0" prefHeight="355.0" prefWidth="240.0" style="-fx-border-color: #000;">
-         <children>
-            <AnchorPane prefHeight="100.0" prefWidth="109.0">
-               <children>
-                  <ImageView fitHeight="134.0" fitWidth="220.0" layoutX="12.0" layoutY="125.0">
-                     <image>
-                        <Image url="@imagens/Ellipse%201.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="309.0" fitWidth="321.0" layoutX="-20.0">
-                     <image>
-                        <Image url="@imagens/Learning-pana%201.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="98.0" layoutY="60.0">
-                     <image>
-                        <Image url="@imagens/exclamation-solid%201.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </children>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Layer>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
             <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" text="Ver registros" textFill="WHITE" />
@@ -51,19 +23,23 @@
             </ImageView>
          </children>
       </Pane>
-      <Label layoutX="277.0" layoutY="139.0" prefHeight="26.0" prefWidth="142.0" text="No dia:" />
-      <ComboBox fx:id="diaEntrega" layoutX="278.0" layoutY="159.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label layoutX="278.0" layoutY="76.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
-      <ComboBox fx:id="nomeProfessor" layoutX="278.0" layoutY="94.0" prefHeight="26.0" prefWidth="150.0" />
-      <ComboBox fx:id="horarioEntrega" layoutX="278.0" layoutY="224.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label layoutX="278.0" layoutY="200.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
-      <Label layoutX="278.0" layoutY="258.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
-      <ComboBox fx:id="equipamento" layoutX="278.0" layoutY="284.0" prefHeight="26.0" prefWidth="150.0" />
-      <Button id="btnEnviar" fx:id="btnEnviar" layoutX="496.0" layoutY="282.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #FBB337;" text="Enviar" />
       <ImageView fx:id="iconConfig" fitHeight="31.0" fitWidth="30.0" layoutX="556.0" layoutY="355.0">
          <image>
             <Image url="@imagens/gear-solid%201.png" />
          </image>
       </ImageView>
+      <AnchorPane layoutX="248.0" layoutY="59.0" prefHeight="342.0" prefWidth="354.0">
+         <children>
+            <Label layoutX="27.0" layoutY="152.0" prefHeight="26.0" prefWidth="142.0" text="No dia:" />
+            <ComboBox fx:id="diaEntrega" layoutX="23.0" layoutY="112.0" prefHeight="26.0" prefWidth="150.0" />
+            <Label layoutX="27.0" layoutY="28.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
+            <ComboBox fx:id="nomeProfessor" layoutX="23.0" layoutY="178.0" prefHeight="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="horarioEntrega" layoutX="27.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" />
+            <Label layoutX="27.0" layoutY="217.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
+            <Label layoutX="27.0" layoutY="88.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
+            <ComboBox fx:id="equipamento" layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="150.0" />
+            <Button fx:id="btnEnviar" layoutX="248.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="enviar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
