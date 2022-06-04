@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-1: #fb6107ff;
+    --cor-2: #fbb337ff;
+    --cor-3: #fdfdfdff;
+    --cor-4: #101609ff;
+    --cor-5: #5c8001ff;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 900px;
+    height: 600px;
+    margin: 20px;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 10px;
+}
+
+/**********************
+     config telas 
+**********************/
+
+/* - tela inicial, e outras coisas **gerais** - */
+
+.menuInicial {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-3);
+    background-image: url("../imagens/Rectangle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.top-bar {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    height: 10vh;
+    position: relative;
+    background-color: var(--cor-5);
+    color: var(--cor-3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_bar-icon {
+    width: 65px;
+    transition: .2s;
+}
+
+.top_bar-icon:hover {
+    transform: scale(1.1);
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+}
+
+.menu_lista-itens {
+    padding: 21px;
+    transition: .5s;
+    cursor: pointer;
+    user-select: none;      
+}
+
+.menu_lista-itens:hover {
+    color: var(--cor-2);
+    text-decoration: underline;
+}
+
+#iconConfig {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 20px 20px 0;
+    width: 40px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#iconConfig:hover {
+    transform: scale(1.1);
+}
+
+/* tela de fazer registros */
+
+.fazerRegistros, .verRegistros {
+    width: 100%;
+    height: 100%;
+}
+
+.fazerRegistros-container {
+    display: flex;
+    justify-content: space-between;
+    height: 81vh;
+}
+
+.img-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    z-index: 2;
+    width: 95%;
+}
+
+.form-wrapper {
+    -webkit-box-shadow: -9px 0px 14px -7px #000000; 
+    box-shadow: -9px 0px 14px -7px #000000;
+    height: 95%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper form {
+    width: 80%;
+    padding: 10px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+}
+
+#fazendoRegistros {
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 2px solid var(--cor-2);
+    background-color: var(--cor-2);
+    color: var(--cor-3);
+    transition: .2s;
+    cursor: pointer;
+}
+
+#fazendoRegistros:hover {
+    background-color: var(--cor-3);
+    color: var(--cor-2);
+    border-radius: 20px;
+}
+
+/* tela de fazer registros */
+
+.verRegistros {
+    position: relative;
+}
+
+.verRegistros-container {
+    width: 100%;
+    height: 81vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registroBox {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 5px black;
+    margin: 20px;
+    padding: 10px;
+    transition: all .5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.registroBox-texto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.registroBox-checkbox {
+    right: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.registroBox::before {
+    content: '';
+    z-index: -1;
+    height: 0;
+    margin: -10px 0 0 -10px;
+    width: 100%;
+    position: absolute;
+    transition: ease-in-out .3s;
+    background-color: var(--cor-2);
+}
+
+.registroBox:hover {
+    box-shadow: -4px 4px 5px black;
+    border-radius: 10px;
+}
+
+.registroBox:hover .registroBox-texto {
+    transform: scale(1.05);
+    color: var(--cor-4);
+}
+
+.registroBox:hover::before {
+    border-radius: 10px;
+    height: 100%;
+}
+
+#excluir {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--cor-2);
+    background-color: var(--cor-2);
+    color: var(--cor-3);
+    transition: .2s;
+    cursor: pointer;
+}
+
+#excluir:hover {
+    background-color: var(--cor-3);
+    color: var(--cor-4);
+    border-radius: 20px;
+}
