@@ -14,10 +14,10 @@
             <img src="imagens/vetorfoda.png" alt="">
         </div>
         <div class="form-wrapper">
-            <form method="post" action="registrar.php">
+            <form method="post" action="../model/dados.php">
                 <div class="professor-wrapper">
-                    <label for="professor">Professor:</label>
-                    <select name="professor" id="nomeProfessor">
+                    <label for="nomeProfessor">Professor:</label>
+                    <select name="nomeProfessor" id="nomeProfessor">
                         <option value="Alcides">Alcides</option>
                         <option value="Anderson">Anderson</option>
                         <option value="Wendel">Wendel</option>
@@ -70,11 +70,13 @@
                         <option value="caixa de som">caixa de som</option>
                     </select>
                 </div>
-                <input type="submit" id="fazendoRegistros" value="enviar">
+                <input type="submit" value="enviar" id="fazendoRegistros">
             </form>
         </div>
     </div>
     <img src="imagens/gear-solid 1.png" alt="configurações" id="iconConfig">
 </div>
-<script src="../control/jquery.js"></script>
-<script src="../control/app.js"></script>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/alertify.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="../control/atualizarDados.js"></script>

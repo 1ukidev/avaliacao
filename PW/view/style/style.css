@@ -125,7 +125,7 @@ body {
 .form-wrapper {
     -webkit-box-shadow: -9px 0px 14px -7px #000000; 
     box-shadow: -9px 0px 14px -7px #000000;
-    height: 95%;
+    height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;

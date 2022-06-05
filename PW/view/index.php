@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prova - pw</title>
+    <link rel="stylesheet" href="style/alertify.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
             <img src="imagens/gear-solid 1.png" alt="configurações" id="iconConfig">
         </div>
     </div>
-    <script src="../control/jquery.js"></script>
-    <script src="../control/app.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
