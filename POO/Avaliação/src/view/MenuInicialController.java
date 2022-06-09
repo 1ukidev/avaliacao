@@ -31,7 +31,8 @@ public class MenuInicialController {
     @FXML
     void abrirVerRegistros(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        funcoes.mudarTela2(event, verRegistros, "verRegistros.fxml", "Ver Registros");
+        ajuda.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
     
     @FXML

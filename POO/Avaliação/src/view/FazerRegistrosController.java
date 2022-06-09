@@ -16,9 +16,6 @@ public class FazerRegistrosController {
     private Hyperlink Inicio;
 
     @FXML
-    private Hyperlink ajuda;
-
-    @FXML
     private Button btnEnviar;
 
     @FXML
@@ -43,20 +40,22 @@ public class FazerRegistrosController {
     private Hyperlink verRegistros;
 
     @FXML
-    void abrirTelaAjuda(ActionEvent event) throws IOException {
-        
-    }
-
-    @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        funcoes.mudarTela2(event, Inicio, "../view/menuInicial.fxml", "Menu Inicial");
+        btnEnviar.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
 
     @FXML
     void abrirVerRegistros(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        funcoes.mudarTela2(event, verRegistros, "../view/verRegistros.fxml", "Ver Registros");
+        btnEnviar.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+    }
+
+    @FXML
+    void enviar(ActionEvent event) {
+        
     }
 
 }
