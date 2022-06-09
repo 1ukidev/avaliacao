@@ -12,3 +12,19 @@
     
     var_dump($dados);
 ?>
+<script>
+    $(() => {
+        let formData = new FormData();
+        formData.append("dados", <?php $dados ?>);
+        $.ajax({
+            url: "../view/verRegistros.php",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: (e) => {
+                alert("masssa");
+            }
+        })
+    })
+</script>
