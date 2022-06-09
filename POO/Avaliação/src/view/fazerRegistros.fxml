@@ -14,6 +14,7 @@
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
             <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
+            <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" text="Fazer registro" textFill="WHITE" />
             <Hyperlink fx:id="ajuda" layoutX="432.0" layoutY="19.0" onAction="#abrirTelaAjuda" prefHeight="22.0" prefWidth="56.0" text="ajuda" textFill="WHITE" />
             <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
@@ -33,36 +34,12 @@
             <Label layoutX="27.0" layoutY="152.0" prefHeight="26.0" prefWidth="142.0" text="No dia:" />
             <ComboBox fx:id="equipamento" layoutX="23.0" layoutY="112.0" prefHeight="26.0" prefWidth="150.0" />
             <Label layoutX="27.0" layoutY="28.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
-            <ComboBox fx:id="diaEntrega" layoutX="23.0" layoutY="178.0" prefHeight="26.0" prefWidth="150.0" />
-            <ComboBox fx:id="horarioEntrega" layoutX="23.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="diaDoUso" layoutX="23.0" layoutY="178.0" prefHeight="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="horarioEntrega" layoutX="27.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" />
             <Label layoutX="27.0" layoutY="217.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
             <Label layoutX="27.0" layoutY="88.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
-            <ComboBox fx:id="nomeProfessor" layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="150.0" />
-            <Button fx:id="btnEnviar" layoutX="248.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="enviar" textFill="WHITE" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="labelText" layoutX="14.0" layoutY="66.0" prefHeight="321.0" prefWidth="235.0">
-         <children>
-            <ImageView fitHeight="213.0" fitWidth="228.0" layoutX="4.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@imagens/Rectangle.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="90.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@imagens/caixasom.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="59.0" fitWidth="56.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@imagens/notebook.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="59.0" fitWidth="56.0" layoutX="165.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@imagens/projetor.png" />
-               </image>
-            </ImageView>
+            <ComboBox fx:id="nomeDoProfessor" layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="150.0" />
+            <Button fx:id="btnEnviar" layoutX="225.0" layoutY="239.0" mnemonicParsing="false" onAction="#enviar" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="Enviar" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

@@ -22,9 +22,10 @@ public class MenuInicialController {
     private Hyperlink verRegistros;
 
     @FXML
-    void mudarTela(ActionEvent event) throws IOException {
+    void abrirFazerRegistro(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        funcoes.mudarTela2(event, fazerRegistro, "fazerRegistros.fxml", "Fazer registros");
+        ajuda.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
     }
 
     @FXML
@@ -37,4 +38,5 @@ public class MenuInicialController {
     void abrirVerAjuda(ActionEvent event) throws IOException {
 
     }
+
 }

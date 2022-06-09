@@ -25,12 +25,12 @@
             <Font name="Noto Looped Thai SemiCondensed SemiBold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="216.0" layoutY="211.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #fff;" text="Claro!" textFill="#5c8001">
+      <Button fx:id="btnSim" layoutX="216.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #fff;" text="Claro!" textFill="#5c8001">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="216.0" layoutY="264.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #486500;" text="Não, obrigado(a)!" textFill="WHITE">
+      <Button fx:id="btnNao" layoutX="216.0" layoutY="264.0" mnemonicParsing="false" onAction="#pularTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #486500;" text="Não, obrigado(a)!" textFill="WHITE">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
