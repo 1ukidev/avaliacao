@@ -48,12 +48,13 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 1px solid black;
-    height: 10vh;
+    height: 7vh;
     position: relative;
     background-color: var(--cor-5);
     color: var(--cor-3);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .top_bar-icon {
@@ -106,7 +107,7 @@ body {
 .fazerRegistros-container {
     display: flex;
     justify-content: space-between;
-    height: 81vh;
+    height: 510px;
 }
 
 .img-container {
@@ -125,7 +126,7 @@ body {
 .form-wrapper {
     -webkit-box-shadow: -9px 0px 14px -7px #000000; 
     box-shadow: -9px 0px 14px -7px #000000;
-    height: 100%;
+    height: 537px;
     width: 50%;
     display: flex;
     justify-content: center;
