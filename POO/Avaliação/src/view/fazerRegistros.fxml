@@ -13,9 +13,9 @@
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" text="Fazer registro" textFill="WHITE" />
-            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" onAction="#mudarTela" text="Ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
+            <Hyperlink fx:id="ajuda" layoutX="432.0" layoutY="19.0" onAction="#abrirTelaAjuda" prefHeight="22.0" prefWidth="56.0" text="ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
