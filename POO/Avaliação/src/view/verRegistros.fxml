@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.VerRegistrosController">
+   <children>
+      <Pane layoutX="477.0" prefHeight="400.0" prefWidth="126.0" style="-fx-background-color: #5C8001;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="25.0" layoutY="14.0">
+               <image>
+                  <Image url="@imagens/icon%201.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="verAjuda" layoutX="42.0" layoutY="239.0" onAction="#abrirVerAjuda" text="Ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="fazerRegistro" layoutX="15.0" layoutY="178.0" onAction="#abrirFazerRegistro" text="Fazer registros" textFill="WHITE" />
+            <Hyperlink fx:id="inicio" layoutX="43.0" layoutY="121.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
+            <ImageView fx:id="iconConfig" fitHeight="33.0" fitWidth="36.0" layoutX="46.0" layoutY="324.0">
+               <image>
+                  <Image url="@imagens/gear-solid%201.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
