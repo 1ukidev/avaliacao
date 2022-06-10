@@ -10,18 +10,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="menuInicial">
-            <div class="top-bar">
-                <img class="top_bar-icon" src="imagens/icon 1.png" alt="icone do programa">
-                <div class="menu">
-                    <ul class="menu-lista">
-                        <li class="menu_lista-itens" id="verRegistros">ver registros</li>
-                        <li class="menu_lista-itens" id="fazerRegistros">fazer registros</li>
-                        <li class="menu_lista-itens" id="ajuda">ajuda</li>
-                    </ul>
-                </div>
-            </div>
-            <img src="imagens/gear-solid 1.png" alt="configurações" id="iconConfig">
+    <div class="coisas">
+            <img src="imagens/icon 1.png" alt="">
+            <span class="text1">Bem-Vindo(a)</span> 
+            <span class="text2">Deseja ver um breve tutorial</span>
+            <div class="btns">   
+              <button id="btn1">Claro!</button><br><br>
+              <button id="btn2">Não, obrigado(a)!</button>  
+            </div>    
         </div>
     </div>
     <script src="scripts/jquery.js"></script>
