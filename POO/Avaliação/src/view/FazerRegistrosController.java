@@ -1,14 +1,14 @@
 package view;
 
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import model.Emprestimo; 
 
 public class FazerRegistrosController {
 
@@ -19,43 +19,39 @@ public class FazerRegistrosController {
     private Button btnEnviar;
 
     @FXML
-    private ComboBox<?> diaEntrega;
+    private DatePicker diaEntrega;
 
     @FXML
-    private ComboBox<?> equipamento;
+    private TextField equipamento;
 
     @FXML
-    private ComboBox<?> horarioEntrega;
+    private Hyperlink fazerRegistro;
+
+    @FXML
+    private TextField horarioEntrega;
 
     @FXML
     private ImageView iconConfig;
 
     @FXML
-    private AnchorPane labelText;
-
-    @FXML
-    private ComboBox<?> nomeProfessor;
+    private ChoiceBox<?> nomeProfessor;
 
     @FXML
     private Hyperlink verRegistros;
 
     @FXML
-    void abrirTelaInicio(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
-        btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+    void abrirTelaInicio(ActionEvent event) {
+
     }
 
     @FXML
-    void abrirVerRegistros(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
-        btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+    void abrirVerRegistros(ActionEvent event) {
+
     }
 
     @FXML
     void enviar(ActionEvent event) {
-        
+
     }
-    
+
 }

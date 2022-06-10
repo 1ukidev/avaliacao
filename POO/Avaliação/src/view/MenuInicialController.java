@@ -24,21 +24,20 @@ public class MenuInicialController {
     @FXML
     void abrirFazerRegistro(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        fazerRegistro.getScene().getWindow().hide();
+        ajuda.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
     }
 
     @FXML
     void abrirVerRegistros(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        verRegistros.getScene().getWindow().hide();
+        ajuda.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
     
     @FXML
     void abrirVerAjuda(ActionEvent event) throws IOException {
-       Funcoes funcoes = new Funcoes();
-        ajuda.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
+
     }
+
 }

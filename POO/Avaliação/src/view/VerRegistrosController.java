@@ -19,6 +19,9 @@ public class VerRegistrosController {
     private Hyperlink inicio;
 
     @FXML
+    private Hyperlink verAjuda;
+
+    @FXML
     void abrirFazerRegistro(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
@@ -31,4 +34,10 @@ public class VerRegistrosController {
         inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
+
+    @FXML
+    void abrirVerAjuda(ActionEvent event) throws IOException {
+
+    }
+
 }
