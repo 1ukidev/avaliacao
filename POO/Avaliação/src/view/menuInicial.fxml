@@ -17,7 +17,7 @@
                   <Image url="@../icon%201.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" text="Ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" onAction="#abrirVerAjuda" text="Ajuda" textFill="WHITE" />
             <ImageView fitHeight="59.0" fitWidth="70.0" layoutY="2.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
@@ -25,7 +25,7 @@
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="455.0" fitWidth="600.0" layoutY="14.0">
+      <ImageView fitHeight="455.0" fitWidth="600.0">
          <image>
             <Image url="@imagens/Rectangle.png" />
          </image>

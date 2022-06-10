@@ -13,8 +13,7 @@
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" text="Fazer registro" textFill="WHITE" />
+            <Hyperlink fx:id="verRegistros" layoutX="412.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
             <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
@@ -39,6 +38,30 @@
             <Label layoutX="27.0" layoutY="88.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
             <ComboBox fx:id="nomeDoProfessor" layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="150.0" />
             <Button fx:id="btnEnviar" layoutX="225.0" layoutY="239.0" mnemonicParsing="false" onAction="#enviar" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="Enviar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="11.0" layoutY="70.0" prefHeight="319.0" prefWidth="242.0">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="244.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/Rectangle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="14.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/notebook.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="96.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/projetor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="177.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/som.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

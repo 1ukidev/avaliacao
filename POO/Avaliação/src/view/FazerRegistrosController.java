@@ -57,5 +57,6 @@ public class FazerRegistrosController {
     void enviar(ActionEvent event) {
         
     }
+    
 
 }

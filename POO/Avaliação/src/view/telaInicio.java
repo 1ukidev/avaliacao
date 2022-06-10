@@ -18,7 +18,7 @@ public class telaInicio {
     void abrirTutorial(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         btnSim.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+        funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }
 
     @FXML
