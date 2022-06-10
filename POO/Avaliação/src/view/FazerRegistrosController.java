@@ -41,12 +41,16 @@ public class FazerRegistrosController {
 
     @FXML
     void abrirTelaInicio(ActionEvent event) {
-
+        Funcoes funcoes = new Funcoes();
+        btnEnviar.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
 
     @FXML
     void abrirVerRegistros(ActionEvent event) {
-
+        Funcoes funcoes = new Funcoes();
+        btnEnviar.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
 
     @FXML
