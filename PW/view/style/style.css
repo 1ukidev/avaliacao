@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@
     --cor-3: #fdfdfdff;
     --cor-4: #101609ff;
     --cor-5: #5c8001ff;
+    --cor-6: #486500;
 }
 
 body {
@@ -32,6 +35,72 @@ body {
 **********************/
 
 /* - tela inicial, e outras coisas **gerais** - */
+
+.coisas img{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.coisas{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--cor-5);
+    height: 100%;
+}
+
+.text1{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 38px;
+    color: white;
+   
+}
+.text2{
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+
+.btns button{
+    height: 40px;
+    width: 185px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+#btn1:hover {
+    background-color: var(--cor-5);
+    border: 1px solid var(--cor-3);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+#btn2:hover {
+    background-color: var(--cor-5);
+    border: 1px solid var(--cor-3);
+    color: var(--cor-3);
+    transform: translateY(-7px);
+  }
+.btns{
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+
+#btn1{
+    background-color:  var(--cor-3);
+    color: var(--cor-6);
+}
+#btn2{
+    background-color:  var(--cor-6);
+    color: var(--cor-3);
+}
 
 .menuInicial {
     width: 100%;
