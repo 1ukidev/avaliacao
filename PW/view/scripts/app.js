@@ -22,3 +22,8 @@ $("#verRegistros").click((e) => {
     e.preventDefault();
     mudarTela("verRegistros.php");
 });
+
+$("#btn2").click((e) => {
+    e.preventDefault();
+    mudarTela("telaInicio.php");
+})
