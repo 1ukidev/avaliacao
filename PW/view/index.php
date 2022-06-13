@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <?php
+    /*
+        $dados = [];
+        $arr;
+    */
+    ?>
+    <script>
+        let string;
+        let dados = [];
+        let arr;
+    </script>
     <div class="container">
     <div class="coisas">
             <img src="imagens/icon 1.png" alt="">
