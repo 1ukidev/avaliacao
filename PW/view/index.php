@@ -31,6 +31,7 @@
             </div>    
         </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/app.js"></script>
 </body>
