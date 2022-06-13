@@ -11,17 +11,32 @@
     </div>
     <div class="verRegistros-container">
         <?php
-            include '../model/dados.php';
+            $dadosBruto = $_POST["dados"];
+        /*
+            $arr = explode(",", $dadosBruto);
+            $dados[] = $arr;
+            var_dump($dados);
+        */
         ?>
-        <!--<div class="registroBox">
-            <div class="registroBox-texto">
-                <span>Nome do professor</span>
-                <span>Equipamento</span>
-                <span>Horário</span>
-                <span>Dia</span>
-            </div>
-            <input type="checkbox" name="registroBox-checkbox" class="registroBox-checkbox">
-        </div>-->
+
+        <script>
+            string = '<?php echo $dadosBruto ?>';;
+            if(string != ""){
+                arr = string.split(",");
+                dados.push(arr)
+                for(let i=0; i<dados.length; i++){
+                    $(".verRegistros-container").append(`
+                    <div class="registroBox">
+                        <div class="registroBox-texto">
+                        </div>
+                        <input type="checkbox" class="registroBox-checkbox">
+                    </div>`);
+                    for(let a=0; a<4; a++){
+                        $(".registroBox-texto")[i].append(`<span>${dados[i][a]}</span>`);
+                    }
+                }
+            }
+        </script>
     <button id="excluir">excluir</button>
     </div>
     <img src="imagens/gear-solid 1.png" alt="configurações" id="iconConfig">
