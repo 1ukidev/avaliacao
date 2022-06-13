@@ -1,21 +1,18 @@
 <?php
-    include 'Registro.php';
-    
-    $dados = array();
+    include '../model/Registro.php';
+    $registro = new Registro($_POST["nomeProfessor"], $_POST["dia"], $_POST["horario"], $_POST["equipamento"]);
 
-    function criarDados(){
-        $registro = new Registro($_POST["nomeProfessor"], $_POST["dia"], $_POST["horario"], $_POST["equipamento"]);
-        return $registro;
-    }
-
-    $dados[] = criarDados();
-    
-    var_dump($dados);
 ?>
 <script>
     $(() => {
+        let dados = [
+            '<?php echo $registro->nomeProfessor ?>',
+            '<?php echo $registro->dia ?>',
+            '<?php echo $registro->horario ?>',
+            '<?php echo $registro->equipamento ?>',
+        ]
         let formData = new FormData();
-        formData.append("dados", <?php $dados ?>);
+        formData.append("dados", dados);
         $.ajax({
             url: "../view/verRegistros.php",
             type: "POST",
@@ -23,7 +20,7 @@
             processData: false,
             contentType: false,
             success: (e) => {
-                alert("masssa");
+                $(".container").html(e);
             }
         })
     })
