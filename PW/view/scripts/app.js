@@ -23,6 +23,11 @@ $("#verRegistros").click((e) => {
     mudarTela("verRegistros.php");
 });
 
+$("#btn1").click((e) => {
+    e.preventDefault();
+    mudarTela("telaTutorial.php");
+})
+
 $("#btn2").click((e) => {
     e.preventDefault();
     mudarTela("telaInicio.php");
@@ -36,7 +41,7 @@ $("#excluir").click(() => {
 
         while(item = items.pop()) {
             if(item && item.checked) {
-                dados.splice(i, 1);
+                dados.splice(i);
                 console.log(i)
                 item.parentElement.remove();
             }
@@ -45,3 +50,19 @@ $("#excluir").click(() => {
     }
     
 })
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
