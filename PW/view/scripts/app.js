@@ -27,3 +27,21 @@ $("#btn2").click((e) => {
     e.preventDefault();
     mudarTela("telaInicio.php");
 })
+
+$("#excluir").click(() => {
+    let lista = document.querySelectorAll(".registroBox");
+    for(i = 0; i<lista.length; i++){
+        const items = [].slice.call(lista[i].childNodes);
+        let item;
+
+        while(item = items.pop()) {
+            if(item && item.checked) {
+                dados.splice(i, 1);
+                console.log(i)
+                item.parentElement.remove();
+            }
+        };
+        
+    }
+    
+})
