@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,5 +25,6 @@
             </ImageView>
          </children>
       </Pane>
+      <TableView fx:id="tabela" layoutX="25.0" layoutY="20.0" prefHeight="360.0" prefWidth="426.0" />
    </children>
 </AnchorPane>
