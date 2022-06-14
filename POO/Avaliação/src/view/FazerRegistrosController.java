@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import model.*;
 import control.*;
+
 public class FazerRegistrosController implements Initializable {
     EmprestimoC emprestimoC = new EmprestimoC();
 
