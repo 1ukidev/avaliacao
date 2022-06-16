@@ -10,30 +10,30 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5c8001;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaInicioController">
    <children>
-      <Text fill="#eeecec" layoutX="218.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo(a)">
+      <Text fill="#eeecec" layoutX="201.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo(a)">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="27.0" />
          </font>
       </Text>
-      <Label layoutX="209.0" layoutY="144.0" text="Deseja ver um breve tutorial?" textAlignment="CENTER" textFill="WHITE">
+      <ImageView fitHeight="97.0" fitWidth="102.0" layoutX="249.0">
+         <image>
+            <Image url="@imagens/icon%201.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="199.0" layoutY="144.0" text="Deseja ver um breve tutorial?" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Noto Looped Thai SemiCondensed SemiBold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnSim" layoutX="216.0" layoutY="211.0" mnemonicParsing="false" onAction="#BtnTutor" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #fff;" text="Claro!" textFill="#5c8001">
+      <Button fx:id="btnSim" layoutX="216.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #fff;" text="Claro!" textFill="#5c8001">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btnnao" layoutX="216.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnskip" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #486500;" text="Não, obrigado(a)!" textFill="WHITE">
+      <Button fx:id="btnNao" layoutX="216.0" layoutY="264.0" mnemonicParsing="false" onAction="#pularTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #486500;" text="Não, obrigado(a)!" textFill="WHITE">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
       </Button>
-      <ImageView fitHeight="139.0" fitWidth="164.0" layoutX="229.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/icon%201.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
