@@ -1,0 +1,23 @@
+#btnSim{
+
+-fx-background-color: #fff;
+
+}
+
+#btnSim:hover{
+
+  -fx-background-color: rgb(192, 192, 192);
+
+}
+
+#btnNao{
+   -fx-background-color: #7eb304;
+
+}
+
+#btnNao:hover{
+
+    -fx-background-color: #486500;
+
+
+}
