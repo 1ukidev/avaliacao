@@ -1,19 +1,17 @@
 package view;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import control.*;
 
-public class VerRegistrosController implements Initializable {
+public class VerRegistrosController {
+
     EmprestimoC emprestimoC = new EmprestimoC();
 
     @FXML
@@ -45,6 +43,7 @@ public class VerRegistrosController implements Initializable {
         Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
+        
     }
 
     @FXML
@@ -54,8 +53,10 @@ public class VerRegistrosController implements Initializable {
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize() {
         adicionarRegistros();
+        System.out.println(emprestimoC.lista.get(0).getProfessor());
     }
+
 }

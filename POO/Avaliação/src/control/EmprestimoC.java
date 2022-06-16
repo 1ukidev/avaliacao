@@ -24,7 +24,7 @@ public class EmprestimoC {
         return this;
     }
 
-    public ArrayList<String> professores() {
+    public ArrayList<String> getProfessores() {
         ArrayList<String> professores = new ArrayList<String>();
         for(int i = 0; i < lista.size(); i++) {
             professores.add(lista.get(i).getProfessor());

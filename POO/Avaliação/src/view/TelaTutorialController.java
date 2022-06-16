@@ -27,4 +27,5 @@ public class TelaTutorialController {
         verRegistros.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
+    
 }

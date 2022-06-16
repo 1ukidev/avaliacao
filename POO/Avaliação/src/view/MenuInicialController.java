@@ -41,4 +41,5 @@ public class MenuInicialController {
         ajuda.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }
+    
 }
