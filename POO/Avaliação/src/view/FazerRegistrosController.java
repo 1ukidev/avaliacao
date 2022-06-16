@@ -1,16 +1,19 @@
 package view;
-
+import java.util.ArrayList;
 import java.io.IOException;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.DatePicker;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 
-public class FazerRegistrosController {
+public class FazerRegistrosController implements Initializable {
 
     @FXML
     private Hyperlink Inicio;
@@ -19,25 +22,31 @@ public class FazerRegistrosController {
     private Button btnEnviar;
 
     @FXML
-    private ComboBox<?> diaEntrega;
+    private DatePicker diaDoUso;
 
     @FXML
-    private ComboBox<?> equipamento;
+    private ChoiceBox<String> equipamento;
 
     @FXML
-    private ComboBox<?> horarioEntrega;
+    private ChoiceBox<String> horarioEntrega;
 
     @FXML
     private ImageView iconConfig;
 
     @FXML
-    private AnchorPane labelText;
-
-    @FXML
-    private ComboBox<?> nomeProfessor;
+    private ChoiceBox<String> nomeDoProfessor;
 
     @FXML
     private Hyperlink verRegistros;
+
+    
+
+     ArrayList<String> professor = new ArrayList<String>();
+     ArrayList<String> material = new ArrayList<String>();
+     
+
+
+
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
@@ -57,5 +66,39 @@ public class FazerRegistrosController {
     void enviar(ActionEvent event) {
         
     }
-    
-}
+
+
+    @Override
+	public void initialize(URL url, ResourceBundle reb) {
+		
+        //Adiciona os nomes dos professores no Array de professores.
+        professor.add("Alcides");
+        professor.add("Anderson");
+        professor.add("Andrea");
+        professor.add("Clemilton");
+        professor.add("Escolástica");
+        professor.add("Giselly");
+        professor.add("Josy");
+		professor.add("Juscélio");
+        professor.add("Madalena");
+        professor.add("Morgama");
+        professor.add("Mozean");
+        professor.add("Raab");
+        professor.add("Robson");
+        professor.add("Rodrigo");
+        professor.add("Wendel");
+        professor.add("Zilma");
+
+        material.add("Projetor");
+        material.add("Extensão");
+        material.add("Notebook");
+        material.add("Cabo USB");
+        material.add("Caixa de Som");
+        
+        //Adiciona os nomes dos professores presentes no ArrayList no CheckBox de Professores
+        nomeDoProfessor.getItems().addAll(professor);
+         //Adiciona os equipamentos presentes no ArrayList no CheckBox de Equipamentos
+        equipamento.getItems().addAll(material);
+	
+    }
+    }
