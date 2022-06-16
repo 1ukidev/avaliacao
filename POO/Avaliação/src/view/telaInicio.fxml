@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -20,15 +21,21 @@
             <Font name="Noto Looped Thai SemiCondensed SemiBold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnSim" layoutX="216.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #fff;" text="Claro!" textFill="#5c8001">
+      <Button id="btnSim" fx:id="btnSim" layoutX="216.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTutorial" prefHeight="33.0" prefWidth="168.0" stylesheets="@Style.css" text="Claro!" textFill="#5c8001">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button fx:id="btnNao" layoutX="216.0" layoutY="264.0" mnemonicParsing="false" onAction="#pularTutorial" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #486500;" text="Não, obrigado(a)!" textFill="WHITE">
+      <Button id="btnNao" fx:id="btnNao" layoutX="216.0" layoutY="264.0" mnemonicParsing="false" onAction="#pularTutorial" prefHeight="33.0" prefWidth="168.0" stylesheets="@Style.css" text="Não, obrigado(a)!" textFill="WHITE">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="13.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
          <image>
