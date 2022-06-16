@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaTutorialController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="622.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaTutorialController">
    <children>
       <AnchorPane layoutX="-9.0" layoutY="98.0" prefHeight="230.0" prefWidth="612.0" style="-fx-background-color: #486500;">
          <children>
@@ -35,26 +35,26 @@
       </AnchorPane>
       <ImageView layoutX="44.0" layoutY="43.0">
          <image>
-            <Image url="@../../../../../imagens/verRegistro.png" />
+            <Image url="@../../../imagens/verRegistro.png" />
          </image>
       </ImageView>
       <ImageView layoutX="231.0" layoutY="44.0">
          <image>
-            <Image url="@../../../../../imagens/fazerRegistro.png" />
+            <Image url="@../../../imagens/fazerRegistro.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="72.0" fitWidth="129.0" layoutX="430.0" layoutY="43.0">
          <image>
-            <Image url="@../../../../../imagens/ajuda.png" />
+            <Image url="@../../../imagens/ajuda.png" />
          </image>
       </ImageView>
-      <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
+      <Pane prefHeight="59.0" prefWidth="622.0" style="-fx-background-color: #5C8001;">
          <children>
             <Hyperlink fx:id="verRegistros" layoutX="412.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
+            <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onMouseClicked="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
-                  <Image url="@imagens/icon%201.png" />
+                  <Image url="@../../../avaliacao-teste/POO/Avaliação/src/view/imagens/icon%201.png" />
                </image>
             </ImageView>
          </children>
