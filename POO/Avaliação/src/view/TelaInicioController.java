@@ -4,28 +4,50 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
 
 public class TelaInicioController {
 
     @FXML
-    private Button btnNao;
-
-    @FXML
     private Button btnSim;
+    
+    @FXML
+    private Button btnnao;
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
 
     @FXML
-    void abrirTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
-        btnSim.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
+    void BtnTutor(ActionEvent event) throws IOException {
+
+        root = FXMLLoader.load(getClass().getResource("TelaTutorial.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Tutorial");
+        stage.show();
+
     }
 
     @FXML
-    void pularTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
-        btnNao.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+    void btnskip(ActionEvent event) throws IOException {
+
+
+        root = FXMLLoader.load(getClass().getResource("MenuInicial.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Menu Inicial");
+        stage.show();
+
     }
 
 }
