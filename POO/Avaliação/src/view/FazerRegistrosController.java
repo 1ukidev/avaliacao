@@ -45,11 +45,15 @@ public class FazerRegistrosController implements Initializable {
 
      public String pessoa;
      public String pegouEquipamento;
+     public String horas;
 
      ArrayList<String> professor = new ArrayList<String>();
      ArrayList<String> material = new ArrayList<String>();
      
      Alert alerta = new Alert(AlertType.NONE);
+
+
+
 
 
     @FXML
@@ -114,34 +118,30 @@ public class FazerRegistrosController implements Initializable {
     pessoa = nomeDoProfessor.getValue();
     pegouEquipamento = equipamento.getValue();
     LocalDate data = diaDoUso.getValue();
+    horas = horarioEntrega.getText();
 
     if(pessoa==null || pegouEquipamento==null || data==null || horarioEntrega==null){
 
       alerta.setAlertType(AlertType.ERROR);
       alerta.setTitle("ERRO DE CADASTRO");
-      alerta.setHeaderText("Insira todas as informações corretamente para poder efetuar o cadastro.");
+      alerta.setHeaderText("Insira todas as informações corretamente para poder efetuar o registro.");
       alerta.show();
 
       }else{
  
       alerta.setAlertType(AlertType.INFORMATION);
+      alerta.setTitle("Registro realizado com sucesso!");
+      alerta.setHeaderText("A reserva de "+pessoa+" foi registrada!");
+      alerta.show();
 
 
-    System.out.println(data);
     System.out.println(pessoa);
     System.out.println(pegouEquipamento);
+    System.out.println(data);
+    System.out.println(horas);
         
     }
 }
-
-    @FXML
-    void pegarData(ActionEvent event) {
-
-    // LocalDate data = diaDoUso.getValue();
-    // System.out.println("data")
-
-
-    }
 
 
 }
