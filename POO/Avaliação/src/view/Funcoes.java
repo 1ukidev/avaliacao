@@ -21,6 +21,4 @@ public class Funcoes {
         stage.getIcons().add(icon);
         stage.show();
     }
-
-   
 }
