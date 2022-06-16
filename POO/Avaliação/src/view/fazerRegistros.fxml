@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,14 +33,17 @@
       <AnchorPane layoutX="246.0" layoutY="59.0" prefHeight="342.0" prefWidth="354.0">
          <children>
             <Label layoutX="27.0" layoutY="158.0" prefHeight="26.0" prefWidth="142.0" text="Devolver no dia:" />
-            <Label layoutX="27.0" layoutY="28.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
+            <Label layoutX="27.0" layoutY="31.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
             <Label layoutX="27.0" layoutY="215.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
             <Label layoutX="30.0" layoutY="96.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
-            <Button fx:id="btnEnviar" layoutX="225.0" layoutY="239.0" mnemonicParsing="false" onAction="#enviar" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="Enviar" textFill="WHITE" />
-            <ChoiceBox fx:id="nomeDoProfessor" layoutX="23.0" layoutY="63.0" prefHeight="25.0" prefWidth="164.0" />
-            <ChoiceBox fx:id="equipamento" layoutX="23.0" layoutY="127.0" prefHeight="25.0" prefWidth="164.0" />
-            <ChoiceBox fx:id="horarioEntrega" layoutX="27.0" layoutY="244.0" prefHeight="25.0" prefWidth="164.0" />
-            <DatePicker fx:id="diaDoUso" layoutX="26.0" layoutY="185.0" prefHeight="25.0" prefWidth="164.0" />
+            <Button id="btnEnviar" fx:id="btnEnviar" layoutX="225.0" layoutY="239.0" mnemonicParsing="false" onAction="#enviar" prefHeight="30.0" prefWidth="74.0" stylesheets="@Style.css" text="Enviar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ChoiceBox fx:id="nomeDoProfessor" layoutX="26.0" layoutY="61.0" prefHeight="25.0" prefWidth="164.0" />
+            <ChoiceBox fx:id="equipamento" layoutX="26.0" layoutY="127.0" prefHeight="25.0" prefWidth="164.0" />
+            <DatePicker fx:id="diaDoUso" layoutX="26.0" layoutY="185.0" onAction="#pegarData" prefHeight="25.0" prefWidth="164.0" promptText="Data de devolução" />
+            <TextField fx:id="horarioEntrega" layoutX="26.0" layoutY="242.0" prefHeight="25.0" prefWidth="164.0" promptText="Insira o horário" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="11.0" layoutY="70.0" prefHeight="319.0" prefWidth="242.0">
