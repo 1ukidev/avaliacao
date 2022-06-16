@@ -12,7 +12,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import model.*;
 import control.*;
 
 public class FazerRegistrosController implements Initializable {
@@ -106,13 +105,13 @@ public class FazerRegistrosController implements Initializable {
 
     @FXML
     void enviar(ActionEvent event) throws IOException {
-        Emprestimo emprestimo = new Emprestimo();
-        emprestimo.setProfessor(nomeDoProfessor.getValue().toString());
-        emprestimo.setDiaDoUso(diaDoUso.getValue().toString());
-        emprestimo.setEquipamento(equipamento.getValue().toString());
-        emprestimo.setHorarioEntrega(horarioEntrega.getValue().toString());
-        emprestimoC.adicionarEmprestimo(emprestimo.getProfessor(), emprestimo.getDiaDoUso(), emprestimo.getEquipamento(), emprestimo.getHorarioEntrega());
-        
+        emprestimoC.adicionarEmprestimo(
+            nomeDoProfessor.getSelectionModel().getSelectedItem(),
+            equipamento.getSelectionModel().getSelectedItem(),
+            horarioEntrega.getSelectionModel().getSelectedItem(),
+            diaDoUso.getSelectionModel().getSelectedItem()
+        );
+
         for(int i = 0; i < emprestimoC.lista.size(); i++) {
             System.out.println(emprestimoC.lista.get(i).getProfessor());
             System.out.println(emprestimoC.lista.get(i).getDiaDoUso());

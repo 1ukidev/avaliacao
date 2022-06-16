@@ -16,6 +16,14 @@ public class EmprestimoC {
         lista.add(emprestimo);
     }
 
+    public ArrayList<Emprestimo> getLista() {
+        return lista;
+    }
+
+    public EmprestimoC getInstancia() {
+        return this;
+    }
+
     public ArrayList<String> professores() {
         ArrayList<String> professores = new ArrayList<String>();
         for(int i = 0; i < lista.size(); i++) {

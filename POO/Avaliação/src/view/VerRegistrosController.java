@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,23 +33,6 @@ public class VerRegistrosController implements Initializable {
         TableColumn<Integer, String> diaDoUso = new TableColumn<Integer, String>("Dia do uso");
         TableColumn<Integer, String> equipamento = new TableColumn<Integer, String>("Equipamento");
         TableColumn<Integer, String> horarioEntrega = new TableColumn<Integer, String>("Horário de entrega");
-        
-        professor.setCellValueFactory(cellData -> {
-            Integer i = cellData.getValue();
-            return new ReadOnlyStringWrapper(emprestimoC.lista.get(i).getProfessor());
-        });
-        diaDoUso.setCellValueFactory(cellData -> {
-            Integer i = cellData.getValue();
-            return new ReadOnlyStringWrapper(emprestimoC.lista.get(i).getProfessor());
-        });
-        equipamento.setCellValueFactory(cellData -> {
-            Integer i = cellData.getValue();
-            return new ReadOnlyStringWrapper(emprestimoC.lista.get(i).getProfessor());
-        });
-        horarioEntrega.setCellValueFactory(cellData -> {
-            Integer i = cellData.getValue();
-            return new ReadOnlyStringWrapper(emprestimoC.lista.get(i).getProfessor());
-        });
 
         tabela.getColumns().add(professor);
         tabela.getColumns().add(diaDoUso);

@@ -6,6 +6,10 @@ public class Emprestimo {
     private String equipamento;
     private String horarioEntrega;
 
+    public Emprestimo getInstacia() {
+        return this;
+    }
+
     public String getDiaDoUso() {
         return diaDoUso;
     }
