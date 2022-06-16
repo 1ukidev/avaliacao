@@ -62,6 +62,11 @@
                   <Image url="@imagens/som.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="-10.0" layoutY="-75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/icon%201.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
