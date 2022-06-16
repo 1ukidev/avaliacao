@@ -1,12 +1,16 @@
 package view;
 import java.util.ArrayList;
 import java.io.IOException;
-
+import java.time.LocalDate;
 import java.net.URL;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Hyperlink;
@@ -19,6 +23,9 @@ public class FazerRegistrosController implements Initializable {
     private Hyperlink Inicio;
 
     @FXML
+    private TextField horarioEntrega;
+
+    @FXML
     private Button btnEnviar;
 
     @FXML
@@ -26,9 +33,6 @@ public class FazerRegistrosController implements Initializable {
 
     @FXML
     private ChoiceBox<String> equipamento;
-
-    @FXML
-    private ChoiceBox<String> horarioEntrega;
 
     @FXML
     private ImageView iconConfig;
@@ -39,13 +43,13 @@ public class FazerRegistrosController implements Initializable {
     @FXML
     private Hyperlink verRegistros;
 
-    
+     public String pessoa;
+     public String pegouEquipamento;
 
      ArrayList<String> professor = new ArrayList<String>();
      ArrayList<String> material = new ArrayList<String>();
      
-
-
+     Alert alerta = new Alert(AlertType.NONE);
 
 
     @FXML
@@ -61,12 +65,6 @@ public class FazerRegistrosController implements Initializable {
         btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
-
-    @FXML
-    void enviar(ActionEvent event) {
-        
-    }
-
 
     @Override
 	public void initialize(URL url, ResourceBundle reb) {
@@ -100,5 +98,51 @@ public class FazerRegistrosController implements Initializable {
          //Adiciona os equipamentos presentes no ArrayList no CheckBox de Equipamentos
         equipamento.getItems().addAll(material);
 	
+	}
+/* 
+    public void setinformations(ActionEvent event){
+
+      
+        
+      }
+*/
+    @FXML
+    void enviar(ActionEvent event){
+
+    
+
+    pessoa = nomeDoProfessor.getValue();
+    pegouEquipamento = equipamento.getValue();
+    LocalDate data = diaDoUso.getValue();
+
+    if(pessoa==null || pegouEquipamento==null || data==null || horarioEntrega==null){
+
+      alerta.setAlertType(AlertType.ERROR);
+      alerta.setTitle("ERRO DE CADASTRO");
+      alerta.setHeaderText("Insira todas as informações corretamente para poder efetuar o cadastro.");
+      alerta.show();
+
+      }else{
+ 
+      alerta.setAlertType(AlertType.INFORMATION);
+
+
+    System.out.println(data);
+    System.out.println(pessoa);
+    System.out.println(pegouEquipamento);
+        
     }
+}
+
+    @FXML
+    void pegarData(ActionEvent event) {
+
+    // LocalDate data = diaDoUso.getValue();
+    // System.out.println("data")
+
+
     }
+
+
+}
+    
