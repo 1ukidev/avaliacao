@@ -56,7 +56,6 @@ public class VerRegistrosController {
     @FXML
     public void initialize() {
         adicionarRegistros();
-        System.out.println(emprestimoC.lista.get(0).getProfessor());
     }
 
 }
