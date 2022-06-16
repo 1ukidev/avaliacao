@@ -15,11 +15,16 @@
                   <Image url="@imagens/icon%201.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="fazerRegistro" layoutX="12.0" layoutY="225.0" onAction="#abrirFazerRegistro" text="Fazer registros" textFill="WHITE" />
+            <Hyperlink fx:id="fazerRegistro" layoutX="22.0" layoutY="225.0" onAction="#abrirFazerRegistro" text="Fazer registros" textFill="WHITE" />
             <Hyperlink fx:id="inicio" layoutX="43.0" layoutY="142.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fx:id="iconConfig" fitHeight="33.0" fitWidth="36.0" layoutX="46.0" layoutY="324.0">
                <image>
                   <Image url="@imagens/gear-solid%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/icon%201.png" />
                </image>
             </ImageView>
          </children>
