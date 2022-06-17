@@ -74,11 +74,12 @@ public class FazerRegistrosController implements Initializable {
     }
 
     void adicionarEquipamentos() {
-        equipamento.getItems().add("Notebook");
-        equipamento.getItems().add("Monitor");
-        equipamento.getItems().add("Teclado");
-        equipamento.getItems().add("Mouse");
-        equipamento.getItems().add("Impressora");
+        equipamento.getItems().add("ThinkPad 1");
+        equipamento.getItems().add("ThinkPad 2");
+        equipamento.getItems().add("ThinkPad 3");
+        equipamento.getItems().add("Projetor 1");
+        equipamento.getItems().add("Projetor 2");
+        equipamento.getItems().add("Projetor 3");
     }
 
     void adicionarHorarios() {

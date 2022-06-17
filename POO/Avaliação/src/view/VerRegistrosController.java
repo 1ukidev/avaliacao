@@ -7,10 +7,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import model.*;
@@ -53,7 +55,7 @@ public class VerRegistrosController {
             registros.remove(tabela.getSelectionModel().getSelectedIndex());
             tabela.refresh();
         } catch (Exception e) {
-            System.out.println("Erro ao remover registro");
+            alertaErro("Selecione algum registro para remover");
         }
     }
 
@@ -86,6 +88,12 @@ public class VerRegistrosController {
                 )
             );
         }
+    }
+
+    void alertaErro(String texto) {
+        Alert mensagem = new Alert(AlertType.ERROR);
+        mensagem.setContentText(texto);
+        mensagem.show();
     }
 
 }
