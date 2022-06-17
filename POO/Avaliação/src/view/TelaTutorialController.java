@@ -15,6 +15,9 @@ public class TelaTutorialController {
     private Hyperlink verRegistros;
 
     @FXML
+    private Hyperlink fazerRegistros;
+
+    @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         Inicio.getScene().getWindow().hide();
@@ -28,4 +31,11 @@ public class TelaTutorialController {
         funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
     
+    @FXML
+    void abrirFazerRegistros(ActionEvent event) throws IOException {
+        Funcoes funcoes = new Funcoes();
+        verRegistros.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registro");
+    }
+
 }

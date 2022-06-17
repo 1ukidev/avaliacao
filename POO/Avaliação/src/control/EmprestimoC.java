@@ -16,30 +16,12 @@ public class EmprestimoC {
 
     public ArrayList<Emprestimo> lista = new ArrayList<Emprestimo>();
     
-    public void adicionarEmprestimo(String professor, String diaDoUso, String equipamento, String horarioEntrega) {
+    public void adicionarEmprestimo(String professor, String equipamento, String horarioEntrega, String diaDoUso) {
         Emprestimo emprestimo = new Emprestimo();
         emprestimo.setProfessor(professor);
-        emprestimo.setDiaDoUso(diaDoUso);
         emprestimo.setEquipamento(equipamento);
         emprestimo.setHorarioEntrega(horarioEntrega);
+        emprestimo.setDiaDoUso(diaDoUso);
         lista.add(emprestimo);
-    }
-
-    public ArrayList<String> getProfessores() {
-        ArrayList<String> professores = new ArrayList<String>();
-        for(int i = 0; i < lista.size(); i++) {
-            professores.add(lista.get(i).getProfessor());
-        }
-        return professores;
-    }
-
-    public boolean consultarProfessor(Emprestimo emprestimo) {
-        boolean retorno = false;
-        for(int i = 0; i < lista.size(); i++) {
-            if(lista.get(i).getProfessor().equals(emprestimo.getProfessor())) {
-                retorno = true;
-            }
-        }
-        return retorno;
     }
 }

@@ -13,28 +13,24 @@
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verRegistros" layoutX="412.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
+            <Hyperlink fx:id="verRegistros" layoutX="353.0" layoutY="18.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
+            <Hyperlink fx:id="Inicio" layoutX="457.0" layoutY="18.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
                </image>
             </ImageView>
+            <Hyperlink fx:id="tutorial" layoutX="518.0" layoutY="18.0" onAction="#abrirTutorial" text="Tutorial" textFill="WHITE" />
          </children>
       </Pane>
-      <ImageView fx:id="iconConfig" fitHeight="31.0" fitWidth="30.0" layoutX="556.0" layoutY="355.0">
-         <image>
-            <Image url="@imagens/gear-solid%201.png" />
-         </image>
-      </ImageView>
       <AnchorPane layoutX="248.0" layoutY="59.0" prefHeight="342.0" prefWidth="354.0">
          <children>
-            <Label layoutX="27.0" layoutY="152.0" prefHeight="26.0" prefWidth="142.0" text="No dia:" />
+            <Label layoutX="27.0" layoutY="215.0" prefHeight="26.0" prefWidth="142.0" text="No dia:" />
             <ComboBox fx:id="equipamento" layoutX="23.0" layoutY="112.0" prefHeight="26.0" prefWidth="150.0" />
             <Label layoutX="27.0" layoutY="28.0" prefHeight="24.0" prefWidth="150.0" text="Nome do professor:" />
-            <ComboBox fx:id="diaDoUso" layoutX="23.0" layoutY="178.0" prefHeight="26.0" prefWidth="150.0" />
-            <ComboBox fx:id="horarioEntrega" layoutX="27.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" />
-            <Label layoutX="27.0" layoutY="217.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
+            <ComboBox fx:id="diaDoUso" layoutX="23.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="horarioEntrega" layoutX="23.0" layoutY="177.0" prefHeight="26.0" prefWidth="150.0" />
+            <Label layoutX="27.0" layoutY="153.0" prefHeight="24.0" prefWidth="150.0" text="No horário:" />
             <Label layoutX="27.0" layoutY="88.0" prefHeight="24.0" prefWidth="150.0" text="Vai pegar:" />
             <ComboBox fx:id="nomeDoProfessor" layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="150.0" />
             <Button fx:id="btnEnviar" layoutX="225.0" layoutY="239.0" mnemonicParsing="false" onAction="#enviar" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #fbb02d;" text="Enviar" textFill="WHITE" />

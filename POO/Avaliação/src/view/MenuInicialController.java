@@ -10,10 +10,10 @@ import javafx.scene.image.ImageView;
 public class MenuInicialController {
 
     @FXML
-    private Hyperlink ajuda;
+    private Hyperlink tutorial;
 
     @FXML
-    public Hyperlink fazerRegistro;
+    public Hyperlink fazerRegistros;
 
     @FXML
     private ImageView iconConfig;
@@ -22,9 +22,9 @@ public class MenuInicialController {
     private Hyperlink verRegistros;
 
     @FXML
-    void abrirFazerRegistro(ActionEvent event) throws IOException {
+    void abrirFazerRegistros(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        fazerRegistro.getScene().getWindow().hide();
+        fazerRegistros.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
     }
 
@@ -36,9 +36,9 @@ public class MenuInicialController {
     }
     
     @FXML
-    void abrirVerAjuda(ActionEvent event) throws IOException {
-       Funcoes funcoes = new Funcoes();
-        ajuda.getScene().getWindow().hide();
+    void abrirTutorial(ActionEvent event) throws IOException {
+        Funcoes funcoes = new Funcoes();
+        tutorial.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }
     

@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5c8001;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaInicioController">
    <children>
-      <Text fill="#eeecec" layoutX="224.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo(a)">
+      <Text fill="#eeecec" layoutX="215.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo(a)">
          <font>
             <Font name="Noto Looped Thai SemiCondensed Bold" size="27.0" />
          </font>
@@ -20,7 +20,7 @@
             <Image url="@imagens/icon%201.png" />
          </image>
       </ImageView>
-      <Label layoutX="216.0" layoutY="145.0" text="Deseja ver um breve tutorial?" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="204.0" layoutY="143.0" text="Deseja ver um breve tutorial?" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Noto Looped Thai SemiCondensed SemiBold" size="14.0" />
          </font>

@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaTutorialController">
    <children>
-      <AnchorPane layoutX="-9.0" layoutY="98.0" prefHeight="230.0" prefWidth="612.0" style="-fx-background-color: #486500;">
+      <AnchorPane layoutX="82.0" layoutY="105.0" prefHeight="230.0" prefWidth="0.0" style="-fx-background-color: #486500;">
          <children>
             <Text fill="WHITE" layoutX="42.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique em &quot;Ver registros&quot;, para visualizar a tela de materiais alugados." textAlignment="CENTER" wrappingWidth="157.0">
                <font>
@@ -22,14 +22,9 @@
                   <Font size="16.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="427.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caso você precise de ajuda selecione a opção &quot;Ajuda&quot;." textAlignment="CENTER" wrappingWidth="157.0">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Text>
             <AnchorPane layoutX="402.0" layoutY="-32.0" prefHeight="262.0" prefWidth="14.0" style="-fx-background-color: #ffffff;" />
             <AnchorPane layoutX="209.0" layoutY="-32.0" prefHeight="262.0" prefWidth="14.0" style="-fx-background-color: #ffffff;" />
-            <AnchorPane layoutX="591.0" layoutY="-32.0" prefHeight="262.0" prefWidth="28.0" style="-fx-background-color: #ffffff;" />
+            <AnchorPane layoutX="413.0" layoutY="-11.0" prefHeight="241.0" prefWidth="0.0" style="-fx-background-color: #ffffff;" />
             <AnchorPane layoutY="-32.0" prefHeight="262.0" prefWidth="28.0" style="-fx-background-color: #ffffff;" />
          </children>
       </AnchorPane>
@@ -43,20 +38,16 @@
             <Image url="@../../../../../imagens/fazerRegistro.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="72.0" fitWidth="129.0" layoutX="430.0" layoutY="43.0">
-         <image>
-            <Image url="@../../../../../imagens/ajuda.png" />
-         </image>
-      </ImageView>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verRegistros" layoutX="412.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
+            <Hyperlink fx:id="verRegistros" layoutX="311.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
             <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
                </image>
             </ImageView>
+            <Hyperlink fx:id="fazerRegistros" layoutX="412.0" layoutY="19.0" onAction="#abrirFazerRegistros" text="Fazer registro" textFill="WHITE" />
          </children>
       </Pane>
    </children>

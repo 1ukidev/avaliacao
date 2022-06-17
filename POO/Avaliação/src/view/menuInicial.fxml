@@ -11,13 +11,13 @@
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
             <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="fazerRegistro" layoutX="410.0" layoutY="19.0" onAction="#abrirFazerRegistro" text="Fazer registro" textFill="WHITE" />
+            <Hyperlink fx:id="fazerRegistros" layoutX="410.0" layoutY="19.0" onAction="#abrirFazerRegistros" text="Fazer registro" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="70.0" layoutY="-3.0">
                <image>
                   <Image url="@../icon%201.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="ajuda" layoutX="522.0" layoutY="19.0" onAction="#abrirVerAjuda" text="Ajuda" textFill="WHITE" />
+            <Hyperlink fx:id="tutorial" layoutX="522.0" layoutY="19.0" onAction="#abrirTutorial" text="Tutorial" textFill="WHITE" />
             <ImageView fitHeight="59.0" fitWidth="70.0" layoutY="2.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
@@ -28,11 +28,6 @@
       <ImageView fitHeight="455.0" fitWidth="600.0">
          <image>
             <Image url="@imagens/Rectangle.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="iconConfig" fitHeight="33.0" fitWidth="33.0" layoutX="553.0" layoutY="353.0">
-         <image>
-            <Image url="@imagens/gear-solid%201.png" />
          </image>
       </ImageView>
    </children>

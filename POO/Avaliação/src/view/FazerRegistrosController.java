@@ -44,6 +44,9 @@ public class FazerRegistrosController implements Initializable {
 
     @FXML
     private Hyperlink verRegistros;
+
+    @FXML
+    private Hyperlink tutorial;
     
     void adicionarProfessores() {
         nomeDoProfessor.getItems().add("Clemilton");
@@ -111,6 +114,13 @@ public class FazerRegistrosController implements Initializable {
     }
 
     @FXML
+    void abrirTutorial(ActionEvent event) throws IOException {
+        Funcoes funcoes = new Funcoes();
+        btnEnviar.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
+    }
+
+    @FXML
     void enviar(ActionEvent event) throws IOException {
         if(
             nomeDoProfessor.getValue() == null ||
@@ -119,6 +129,20 @@ public class FazerRegistrosController implements Initializable {
             diaDoUso.getValue() == null
         ) {
             alertaErro("Preencha todos os campos!");
+            return;
+        }
+
+        for(int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
+            if(equipamento.getValue() == EmprestimoC.getInstancia().lista.get(i).getEquipamento()) {
+                alertaErro("Equipamento já está emprestado!");
+                return;
+            } else if(horarioEntrega.getValue() == EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega()) {
+                alertaErro("Horário indisponível!");
+                return;
+            } else if(diaDoUso.getValue() == EmprestimoC.getInstancia().lista.get(i).getDiaDoUso()) {
+                alertaErro("Dia indisponível!");
+                return;
+            }
         }
 
         EmprestimoC.getInstancia().adicionarEmprestimo(
@@ -130,7 +154,7 @@ public class FazerRegistrosController implements Initializable {
 
         Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
+        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
     }
     
     @Override
