@@ -35,20 +35,21 @@ $("#btn2").click((e) => {
 
 $("#excluir").click(() => {
     let lista = document.querySelectorAll(".registroBox");
+    let arrayItens = [];
     for(i = 0; i<lista.length; i++){
         const items = [].slice.call(lista[i].childNodes);
         let item;
 
         while(item = items.pop()) {
             if(item && item.checked) {
-                dados.splice(i);
-                console.log(i)
+                arrayItens.push(i)
                 item.parentElement.remove();
             }
         };
-        
     }
-    
+    dados = dados.filter((value, index) => {
+        return arrayItens.indexOf(index) == -1;
+    })
 })
 
 var swiper = new Swiper(".mySwiper", {
