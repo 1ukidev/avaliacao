@@ -1,3 +1,3 @@
-- [ ] Adicionar imagem no fazerRegistros.fxml
-- [ ] Adicionar tela de ajuda
-- [ ] Começar backend
+- [x] Adicionar imagem no fazerRegistros.fxml
+- [x] Adicionar tela de ajuda
+- [x] Começar backend
