@@ -4,23 +4,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import control.EmprestimoC;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import control.*;
 
 public class FazerRegistrosController implements Initializable {
-
-    EmprestimoC emprestimoC = new EmprestimoC();
 
     @FXML
     private Hyperlink Inicio;
@@ -94,6 +90,12 @@ public class FazerRegistrosController implements Initializable {
         horarioEntrega.getItems().add("15:50/16:40");
     }
 
+    void alertaErro(String texto) {
+        Alert mensagem = new Alert(AlertType.ERROR);
+        mensagem.setContentText(texto);
+        mensagem.show();
+    }
+
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
@@ -110,30 +112,25 @@ public class FazerRegistrosController implements Initializable {
 
     @FXML
     void enviar(ActionEvent event) throws IOException {
-        emprestimoC.adicionarEmprestimo(
+        if(
+            nomeDoProfessor.getValue() == null ||
+            equipamento.getValue() == null ||
+            horarioEntrega.getValue() == null ||
+            diaDoUso.getValue() == null
+        ) {
+            alertaErro("Preencha todos os campos!");
+        }
+
+        EmprestimoC.getInstancia().adicionarEmprestimo(
             nomeDoProfessor.getSelectionModel().getSelectedItem(),
             equipamento.getSelectionModel().getSelectedItem(),
             horarioEntrega.getSelectionModel().getSelectedItem(),
             diaDoUso.getSelectionModel().getSelectedItem()
         );
 
-        for(int i = 0; i < emprestimoC.lista.size(); i++) {
-            System.out.println(emprestimoC.lista.get(i).getProfessor());
-            System.out.println(emprestimoC.lista.get(i).getDiaDoUso());
-            System.out.println(emprestimoC.lista.get(i).getEquipamento());
-            System.out.println(emprestimoC.lista.get(i).getHorarioEntrega());
-        }
-
+        Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("verRegistros.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        VerRegistrosController verRegistrosController = fxmlLoader.getController();
-        verRegistrosController.emprestimoC = emprestimoC;
-        Stage stage = new Stage();
-        stage.setResizable(false);
-        stage.setTitle("Ver registros");
-        stage.setScene(new Scene(root));
-        stage.show();
+        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
     }
     
     @Override

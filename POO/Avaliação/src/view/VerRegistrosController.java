@@ -2,17 +2,19 @@ package view;
 
 import java.io.IOException;
 
+import control.EmprestimoC;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import control.*;
+import model.Registro;
 
 public class VerRegistrosController {
-
-    EmprestimoC emprestimoC = new EmprestimoC();
 
     @FXML
     private Hyperlink fazerRegistro;
@@ -24,26 +26,13 @@ public class VerRegistrosController {
     private Hyperlink inicio;
 
     @FXML
-    private TableView<Integer> tabela;
-
-    void adicionarRegistros() {
-        TableColumn<Integer, String> professor = new TableColumn<Integer, String>("Professor");
-        TableColumn<Integer, String> diaDoUso = new TableColumn<Integer, String>("Dia do uso");
-        TableColumn<Integer, String> equipamento = new TableColumn<Integer, String>("Equipamento");
-        TableColumn<Integer, String> horarioEntrega = new TableColumn<Integer, String>("Horário de entrega");
-
-        tabela.getColumns().add(professor);
-        tabela.getColumns().add(diaDoUso);
-        tabela.getColumns().add(equipamento);
-        tabela.getColumns().add(horarioEntrega);
-    }
+    private TableView<Registro> tabela;
 
     @FXML
     void abrirFazerRegistro(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
-        
     }
 
     @FXML
@@ -55,7 +44,32 @@ public class VerRegistrosController {
 
     @FXML
     public void initialize() {
-        adicionarRegistros();
+        TableColumn<Registro, String> professor = new TableColumn<Registro, String>("Professor");
+        TableColumn<Registro, String> diaDoUso = new TableColumn<Registro, String>("Dia do uso");
+        TableColumn<Registro, String> equipamento = new TableColumn<Registro, String>("Equipamento");
+        TableColumn<Registro, String> horarioEntrega = new TableColumn<Registro, String>("Horário de entrega");
+
+        professor.setCellValueFactory(new PropertyValueFactory<>("professor"));
+        diaDoUso.setCellValueFactory(new PropertyValueFactory<>("diaDoUso"));
+        equipamento.setCellValueFactory(new PropertyValueFactory<>("equipamento"));
+        horarioEntrega.setCellValueFactory(new PropertyValueFactory<>("horarioEntrega"));
+        
+        tabela.setItems(criarRegistros());
+        tabela.getColumns().addAll(professor, diaDoUso, equipamento, horarioEntrega);
+    }
+
+    ObservableList<Registro> criarRegistros() {
+        for(int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
+            return FXCollections.observableArrayList(
+                new Registro(
+                    EmprestimoC.getInstancia().lista.get(i).getProfessor(),
+                    EmprestimoC.getInstancia().lista.get(i).getDiaDoUso(),
+                    EmprestimoC.getInstancia().lista.get(i).getEquipamento(),
+                    EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega()
+                )
+            );
+        }
+        return null;
     }
 
 }

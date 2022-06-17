@@ -5,8 +5,17 @@ import java.util.ArrayList;
 import model.Emprestimo;
 
 public class EmprestimoC {
-    public ArrayList<Emprestimo> lista = new ArrayList<Emprestimo>();
+    private static EmprestimoC instancia = null;
 
+    public static EmprestimoC getInstancia() {
+        if (instancia == null) {
+            instancia = new EmprestimoC();
+        }
+        return instancia;
+    }
+
+    public ArrayList<Emprestimo> lista = new ArrayList<Emprestimo>();
+    
     public void adicionarEmprestimo(String professor, String diaDoUso, String equipamento, String horarioEntrega) {
         Emprestimo emprestimo = new Emprestimo();
         emprestimo.setProfessor(professor);
@@ -14,14 +23,6 @@ public class EmprestimoC {
         emprestimo.setEquipamento(equipamento);
         emprestimo.setHorarioEntrega(horarioEntrega);
         lista.add(emprestimo);
-    }
-
-    public ArrayList<Emprestimo> getLista() {
-        return lista;
-    }
-
-    public EmprestimoC getInstancia() {
-        return this;
     }
 
     public ArrayList<String> getProfessores() {
