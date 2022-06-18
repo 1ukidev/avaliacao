@@ -24,16 +24,16 @@
             if(string != ""){
                 arr = string.split(",");
                 dados.push(arr)
-                for(let i=0; i<dados.length; i++){
-                    $(".verRegistros-container").append(`
-                    <div class="registroBox">
-                        <div class="registroBox-texto">
-                        </div>
-                        <input type="checkbox" class="registroBox-checkbox">
-                    </div>`);
-                    for(let a=0; a<4; a++){
-                        $(".registroBox-texto")[i].append(`<span>${dados[i][a]}</span>`);
-                    }
+            }
+            for(let i=0; i<dados.length; i++){
+                $(".verRegistros-container").append(`
+                <div class="registroBox">
+                    <div class="registroBox-texto">
+                    </div>
+                    <input type="checkbox" class="registroBox-checkbox">
+                </div>`);
+                for(let a=0; a<4; a++){
+                    $(".registroBox-texto")[i].append(`<span>${dados[i][a]}</span>`);
                 }
             }
         </script>
