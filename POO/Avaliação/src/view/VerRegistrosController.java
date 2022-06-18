@@ -66,10 +66,10 @@ public class VerRegistrosController {
         TableColumn<Registro, String> horarioEntrega = new TableColumn<Registro, String>("Horário de uso");
         TableColumn<Registro, String> diaDoUso = new TableColumn<Registro, String>("Dia");
 
-        professor.setCellValueFactory(new PropertyValueFactory<>("professor"));
-        equipamento.setCellValueFactory(new PropertyValueFactory<>("equipamento"));
-        horarioEntrega.setCellValueFactory(new PropertyValueFactory<>("horarioEntrega"));
-        diaDoUso.setCellValueFactory(new PropertyValueFactory<>("diaDoUso"));
+        professor.setCellValueFactory(new PropertyValueFactory<Registro, String>("professor"));
+        equipamento.setCellValueFactory(new PropertyValueFactory<Registro, String>("equipamento"));
+        horarioEntrega.setCellValueFactory(new PropertyValueFactory<Registro, String>("horarioEntrega"));
+        diaDoUso.setCellValueFactory(new PropertyValueFactory<Registro, String>("diaDoUso"));
         
         criarRegistros();
         tabela.setItems(registros);

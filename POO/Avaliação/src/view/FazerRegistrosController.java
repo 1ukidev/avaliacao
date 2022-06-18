@@ -123,25 +123,19 @@ public class FazerRegistrosController implements Initializable {
 
     @FXML
     void enviar(ActionEvent event) throws IOException {
-        if(
-            nomeDoProfessor.getValue() == null ||
-            equipamento.getValue() == null ||
-            horarioEntrega.getValue() == null ||
-            diaDoUso.getValue() == null
-        ) {
+        if (nomeDoProfessor.getValue() == null ||
+                equipamento.getValue() == null ||
+                horarioEntrega.getValue() == null ||
+                diaDoUso.getValue() == null) {
             alertaErro("Preencha todos os campos!");
             return;
         }
 
-        for(int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
-            if(equipamento.getValue() == EmprestimoC.getInstancia().lista.get(i).getEquipamento()) {
+        for (int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
+            if (equipamento.getValue() == EmprestimoC.getInstancia().lista.get(i).getEquipamento() &&
+                    horarioEntrega.getValue() == EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega() &&
+                    diaDoUso.getValue() == EmprestimoC.getInstancia().lista.get(i).getDiaDoUso()) {
                 alertaErro("Equipamento já está emprestado!");
-                return;
-            } else if(horarioEntrega.getValue() == EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega()) {
-                alertaErro("Horário indisponível!");
-                return;
-            } else if(diaDoUso.getValue() == EmprestimoC.getInstancia().lista.get(i).getDiaDoUso()) {
-                alertaErro("Dia indisponível!");
                 return;
             }
         }
