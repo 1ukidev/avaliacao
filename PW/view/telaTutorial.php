@@ -1,10 +1,10 @@
 <head>
     <link
     rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    href="style/swiper-bundle.min.css"
     />
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper-bundle.min.js"></script>
     <style>
         .swiper {
             width: 304px;
@@ -64,9 +64,6 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="scripts/jquery.js"></script>
     <script src="scripts/app.js"></script>
