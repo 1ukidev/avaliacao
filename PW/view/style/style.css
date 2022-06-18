@@ -30,6 +30,17 @@ body {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 950px) {
+    doby {
+        display: block;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 120px 10px 10px 10px;
+    }
+  }
+
 /**********************
      config telas 
 **********************/
