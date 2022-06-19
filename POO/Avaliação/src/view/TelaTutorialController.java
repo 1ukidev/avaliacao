@@ -12,10 +12,10 @@ public class TelaTutorialController {
     private Hyperlink Inicio;
 
     @FXML
-    private Hyperlink verRegistros;
+    private Hyperlink verEmprestimos;
 
     @FXML
-    private Hyperlink fazerRegistros;
+    private Hyperlink fazerEmprestimo;
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
@@ -25,17 +25,17 @@ public class TelaTutorialController {
     }
 
     @FXML
-    void abrirVerRegistros(ActionEvent event) throws IOException {
+    void abrirVerEmprestimos(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        verRegistros.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+        verEmprestimos.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
     
     @FXML
-    void abrirFazerRegistros(ActionEvent event) throws IOException {
+    void abrirFazerEmprestimo(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        verRegistros.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registro");
+        verEmprestimos.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }
 
 }

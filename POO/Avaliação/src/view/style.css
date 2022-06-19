@@ -1,0 +1,31 @@
+#btnSim {
+    -fx-background-color: #fff;
+}
+
+#btnSim:hover {
+    -fx-background-color: rgb(192, 192, 192);
+}
+
+#btnNao {
+    -fx-background-color: #7eb304;
+}
+
+#btnNao:hover {
+    -fx-background-color: #486500;
+}
+
+#btnEnviar {
+    -fx-background-color: #fbb02d;
+}
+
+#btnEnviar:hover {
+    -fx-background-color: #915d03;
+}
+
+#btnRemover {
+    -fx-background-color: #fbb02d;
+}
+
+#btnRemover:hover {
+    -fx-background-color: #915d03;
+}

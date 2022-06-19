@@ -1,13 +1,10 @@
 package view;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import control.EmprestimoC;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -16,7 +13,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-public class FazerRegistrosController implements Initializable {
+public class FazerEmprestimoController {
 
     @FXML
     private Hyperlink Inicio;
@@ -43,7 +40,7 @@ public class FazerRegistrosController implements Initializable {
     private ComboBox<String> nomeDoProfessor;
 
     @FXML
-    private Hyperlink verRegistros;
+    private Hyperlink verEmprestimos;
 
     @FXML
     private Hyperlink tutorial;
@@ -108,10 +105,10 @@ public class FazerRegistrosController implements Initializable {
     }
 
     @FXML
-    void abrirVerRegistros(ActionEvent event) throws IOException {
+    void abrirVerEmprestimos(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
 
     @FXML
@@ -141,19 +138,19 @@ public class FazerRegistrosController implements Initializable {
         }
 
         EmprestimoC.getInstancia().adicionarEmprestimo(
-            nomeDoProfessor.getSelectionModel().getSelectedItem(),
-            equipamento.getSelectionModel().getSelectedItem(),
-            horarioEntrega.getSelectionModel().getSelectedItem(),
-            diaDoUso.getSelectionModel().getSelectedItem()
+            nomeDoProfessor.getValue(),
+            equipamento.getValue(),
+            horarioEntrega.getValue(),
+            diaDoUso.getValue()
         );
 
         Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver registros");
     }
     
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize() {
         adicionarProfessores();
         adicionarDias();
         adicionarEquipamentos();

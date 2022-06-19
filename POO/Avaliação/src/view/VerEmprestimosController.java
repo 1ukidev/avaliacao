@@ -17,10 +17,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import model.*;
 
-public class VerRegistrosController {
+public class VerEmprestimosController {
 
     @FXML
-    private Hyperlink fazerRegistros;
+    private Hyperlink fazerEmprestimo;
 
     @FXML
     private ImageView iconConfig;
@@ -29,16 +29,16 @@ public class VerRegistrosController {
     private Hyperlink inicio;
 
     @FXML
-    private TableView<Registro> tabela;
+    private TableView<Emprestimo> tabela;
 
     @FXML
     private Button btnRemover;
 
     @FXML
-    void abrirFazerRegistros(ActionEvent event) throws IOException {
+    void abrirFazerEmprestimo(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
+        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }
 
     @FXML
@@ -49,10 +49,10 @@ public class VerRegistrosController {
     }
 
     @FXML
-    void removerRegistro(ActionEvent event) {
+    void removerEmprestimo(ActionEvent event) {
         try {
             EmprestimoC.getInstancia().lista.remove(tabela.getSelectionModel().getSelectedIndex());
-            registros.remove(tabela.getSelectionModel().getSelectedIndex());
+            emprestimos.remove(tabela.getSelectionModel().getSelectedIndex());
             tabela.refresh();
         } catch (Exception e) {
             alertaErro("Selecione algum registro para remover");
@@ -61,26 +61,29 @@ public class VerRegistrosController {
 
     @FXML
     public void initialize() {
-        TableColumn<Registro, String> professor = new TableColumn<Registro, String>("Professor");
-        TableColumn<Registro, String> equipamento = new TableColumn<Registro, String>("Equipamento");
-        TableColumn<Registro, String> horarioEntrega = new TableColumn<Registro, String>("Horário de uso");
-        TableColumn<Registro, String> diaDoUso = new TableColumn<Registro, String>("Dia");
+        TableColumn<Emprestimo, String> professor = new TableColumn<Emprestimo, String>("Professor");
+        TableColumn<Emprestimo, String> equipamento = new TableColumn<Emprestimo, String>("Equipamento");
+        TableColumn<Emprestimo, String> horarioEntrega = new TableColumn<Emprestimo, String>("Horário de uso");
+        TableColumn<Emprestimo, String> diaDoUso = new TableColumn<Emprestimo, String>("Dia");
 
-        professor.setCellValueFactory(new PropertyValueFactory<Registro, String>("professor"));
-        equipamento.setCellValueFactory(new PropertyValueFactory<Registro, String>("equipamento"));
-        horarioEntrega.setCellValueFactory(new PropertyValueFactory<Registro, String>("horarioEntrega"));
-        diaDoUso.setCellValueFactory(new PropertyValueFactory<Registro, String>("diaDoUso"));
+        professor.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("professor"));
+        equipamento.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("equipamento"));
+        horarioEntrega.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("horarioEntrega"));
+        diaDoUso.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("diaDoUso"));
         
         criarRegistros();
-        tabela.setItems(registros);
-        tabela.getColumns().addAll(professor, equipamento, horarioEntrega, diaDoUso);
+        tabela.setItems(emprestimos);
+        tabela.getColumns().add(professor);
+        tabela.getColumns().add(equipamento);
+        tabela.getColumns().add(horarioEntrega);
+        tabela.getColumns().add(diaDoUso);
     }
 
-    private ObservableList<Registro> registros = FXCollections.<Registro>observableArrayList();
+    private ObservableList<Emprestimo> emprestimos = FXCollections.<Emprestimo>observableArrayList();
 
     void criarRegistros() {
         for(int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
-            registros.add(new Registro(
+            emprestimos.add(new Emprestimo(
                     EmprestimoC.getInstancia().lista.get(i).getProfessor(),
                     EmprestimoC.getInstancia().lista.get(i).getEquipamento(),
                     EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega(),

@@ -10,8 +10,7 @@
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verRegistros" layoutX="310.0" layoutY="19.0" onAction="#abrirVerRegistros" text="Ver registros" textFill="WHITE" />
-            <Hyperlink fx:id="fazerRegistros" layoutX="410.0" layoutY="19.0" onAction="#abrirFazerRegistros" text="Fazer registro" textFill="WHITE" />
+            <Hyperlink fx:id="fazerEmprestimo" layoutX="396.0" layoutY="20.0" onAction="#abrirFazerEmprestimo" text="Fazer emprestimo" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="70.0" layoutY="-3.0">
                <image>
                   <Image url="@../icon%201.png" />
@@ -23,6 +22,7 @@
                   <Image url="@imagens/icon%201.png" />
                </image>
             </ImageView>
+            <Hyperlink fx:id="verEmprestimos" layoutX="274.0" layoutY="19.0" onAction="#abrirVerEmprestimos" text="Ver emprestimos" textFill="WHITE" />
          </children>
       </Pane>
       <ImageView fitHeight="455.0" fitWidth="600.0">

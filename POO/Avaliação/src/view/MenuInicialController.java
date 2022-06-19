@@ -13,26 +13,26 @@ public class MenuInicialController {
     private Hyperlink tutorial;
 
     @FXML
-    public Hyperlink fazerRegistros;
+    public Hyperlink fazerEmprestimo;
 
     @FXML
     private ImageView iconConfig;
 
     @FXML
-    private Hyperlink verRegistros;
+    private Hyperlink verEmprestimos;
 
     @FXML
-    void abrirFazerRegistros(ActionEvent event) throws IOException {
+    void abrirFazerEmprestimo(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        fazerRegistros.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "fazerRegistros.fxml", "Fazer registros");
+        fazerEmprestimo.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }
 
     @FXML
-    void abrirVerRegistros(ActionEvent event) throws IOException {
+    void abrirVerEmprestimos(ActionEvent event) throws IOException {
         Funcoes funcoes = new Funcoes();
-        verRegistros.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verRegistros.fxml", "Ver registros");
+        verEmprestimos.getScene().getWindow().hide();
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
     
     @FXML
