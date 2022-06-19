@@ -30,12 +30,12 @@
       </AnchorPane>
       <ImageView layoutX="44.0" layoutY="43.0">
          <image>
-            <Image url="@../../../../../imagens/verRegistro.png" />
+            <Image url="@../../../../../imagens/verEmprestimos.png" />
          </image>
       </ImageView>
       <ImageView layoutX="231.0" layoutY="44.0">
          <image>
-            <Image url="@../../../../../imagens/fazerRegistro.png" />
+            <Image url="@../../../../../imagens/fazerEmprestimo.png" />
          </image>
       </ImageView>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">

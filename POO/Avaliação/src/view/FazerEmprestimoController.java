@@ -5,8 +5,6 @@ import java.io.IOException;
 import control.EmprestimoC;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
@@ -14,6 +12,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 public class FazerEmprestimoController {
+
+    EmprestimoC emprestimoC = EmprestimoC.getInstancia();
+    Funcoes funcoes = Funcoes.getInstancia();
 
     @FXML
     private Hyperlink Inicio;
@@ -91,29 +92,20 @@ public class FazerEmprestimoController {
         horarioEntrega.getItems().add("15:50/16:40");
     }
 
-    void alertaErro(String texto) {
-        Alert mensagem = new Alert(AlertType.ERROR);
-        mensagem.setContentText(texto);
-        mensagem.show();
-    }
-
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
 
     @FXML
     void abrirTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }
@@ -124,29 +116,28 @@ public class FazerEmprestimoController {
                 equipamento.getValue() == null ||
                 horarioEntrega.getValue() == null ||
                 diaDoUso.getValue() == null) {
-            alertaErro("Preencha todos os campos!");
+            funcoes.alertaErro("Preencha todos os campos!");
             return;
         }
 
         for (int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
-            if (equipamento.getValue() == EmprestimoC.getInstancia().lista.get(i).getEquipamento() &&
-                    horarioEntrega.getValue() == EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega() &&
-                    diaDoUso.getValue() == EmprestimoC.getInstancia().lista.get(i).getDiaDoUso()) {
-                alertaErro("Equipamento já está emprestado!");
+            if (equipamento.getValue() == emprestimoC.lista.get(i).getEquipamento() &&
+                    horarioEntrega.getValue() == emprestimoC.lista.get(i).getHorarioEntrega() &&
+                    diaDoUso.getValue() == emprestimoC.lista.get(i).getDiaDoUso()) {
+                funcoes.alertaErro("Equipamento já está emprestado!");
                 return;
             }
         }
 
-        EmprestimoC.getInstancia().adicionarEmprestimo(
+        emprestimoC.adicionarEmprestimo(
             nomeDoProfessor.getValue(),
             equipamento.getValue(),
             horarioEntrega.getValue(),
             diaDoUso.getValue()
         );
 
-        Funcoes funcoes = new Funcoes();
         btnEnviar.getScene().getWindow().hide();
-        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver registros");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
     
     @FXML

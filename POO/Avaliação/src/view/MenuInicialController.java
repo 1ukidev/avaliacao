@@ -9,6 +9,8 @@ import javafx.scene.image.ImageView;
 
 public class MenuInicialController {
 
+    Funcoes funcoes = Funcoes.getInstancia();
+
     @FXML
     private Hyperlink tutorial;
 
@@ -23,21 +25,18 @@ public class MenuInicialController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         fazerEmprestimo.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
     
     @FXML
     void abrirTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         tutorial.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }

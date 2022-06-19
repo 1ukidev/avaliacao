@@ -8,6 +8,8 @@ import javafx.scene.control.Hyperlink;
 
 public class TelaTutorialController {
 
+    Funcoes funcoes = Funcoes.getInstancia();
+
     @FXML
     private Hyperlink Inicio;
 
@@ -19,21 +21,18 @@ public class TelaTutorialController {
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         Inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
     }
     
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }

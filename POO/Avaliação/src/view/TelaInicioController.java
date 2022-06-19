@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 
 public class TelaInicioController {
 
+    Funcoes funcoes = Funcoes.getInstancia();
+
     @FXML
     private Button btnNao;
 
@@ -16,14 +18,12 @@ public class TelaInicioController {
 
     @FXML
     void abrirTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         btnSim.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
     }
 
     @FXML
     void pularTutorial(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         btnNao.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }

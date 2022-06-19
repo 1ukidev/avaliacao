@@ -7,17 +7,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import model.*;
 
 public class VerEmprestimosController {
+
+    EmprestimoC emprestimoC = EmprestimoC.getInstancia();
+    Funcoes funcoes = Funcoes.getInstancia();
 
     @FXML
     private Hyperlink fazerEmprestimo;
@@ -36,14 +37,12 @@ public class VerEmprestimosController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
     }
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        Funcoes funcoes = new Funcoes();
         inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
     }
@@ -51,11 +50,11 @@ public class VerEmprestimosController {
     @FXML
     void removerEmprestimo(ActionEvent event) {
         try {
-            EmprestimoC.getInstancia().lista.remove(tabela.getSelectionModel().getSelectedIndex());
+            emprestimoC.lista.remove(tabela.getSelectionModel().getSelectedIndex());
             emprestimos.remove(tabela.getSelectionModel().getSelectedIndex());
             tabela.refresh();
         } catch (Exception e) {
-            alertaErro("Selecione algum registro para remover");
+            funcoes.alertaErro("Selecione algum emprestimo para remover");
         }
     }
 
@@ -71,7 +70,7 @@ public class VerEmprestimosController {
         horarioEntrega.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("horarioEntrega"));
         diaDoUso.setCellValueFactory(new PropertyValueFactory<Emprestimo, String>("diaDoUso"));
         
-        criarRegistros();
+        criarEmprestimos();
         tabela.setItems(emprestimos);
         tabela.getColumns().add(professor);
         tabela.getColumns().add(equipamento);
@@ -81,22 +80,16 @@ public class VerEmprestimosController {
 
     private ObservableList<Emprestimo> emprestimos = FXCollections.<Emprestimo>observableArrayList();
 
-    void criarRegistros() {
-        for(int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
+    void criarEmprestimos() {
+        for(int i = 0; i < emprestimoC.lista.size(); i++) {
             emprestimos.add(new Emprestimo(
-                    EmprestimoC.getInstancia().lista.get(i).getProfessor(),
-                    EmprestimoC.getInstancia().lista.get(i).getEquipamento(),
-                    EmprestimoC.getInstancia().lista.get(i).getHorarioEntrega(),
-                    EmprestimoC.getInstancia().lista.get(i).getDiaDoUso()
+                    emprestimoC.lista.get(i).getProfessor(),
+                    emprestimoC.lista.get(i).getEquipamento(),
+                    emprestimoC.lista.get(i).getHorarioEntrega(),
+                    emprestimoC.lista.get(i).getDiaDoUso()
                 )
             );
         }
-    }
-
-    void alertaErro(String texto) {
-        Alert mensagem = new Alert(AlertType.ERROR);
-        mensagem.setContentText(texto);
-        mensagem.show();
     }
 
 }
