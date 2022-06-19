@@ -22,6 +22,6 @@
          </children>
       </Pane>
       <TableView fx:id="tabela" layoutX="25.0" layoutY="20.0" prefHeight="329.0" prefWidth="426.0" />
-      <Button fx:id="btnRemover" layoutX="25.0" layoutY="359.0" mnemonicParsing="false" onAction="#removerEmprestimo" stylesheets="@style.css" text="Remover emprestimo" />
+      <Button fx:id="btnRemover" layoutX="25.0" layoutY="359.0" mnemonicParsing="false" onAction="#removerEmprestimo" stylesheets="@style.css" text="Remover emprestimo" textFill="WHITE" />
    </children>
 </AnchorPane>
