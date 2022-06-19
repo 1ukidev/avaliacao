@@ -5,9 +5,6 @@ $("#fazendoRegistros").click((e) => {
     formData.append("dia", $("#dia").val());
     formData.append("horario", $("#horario").val());
     formData.append("equipamento", $("#equipamento").val());
-    for (var value of formData.values()) {
-        console.log(value); 
-     }
     $.ajax({
         url: "../model/dados.php",
         type: "POST",
