@@ -15,11 +15,10 @@ public class App extends Application {
     @Override
     public void start(Stage tela) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("view/telaInicio.fxml"));
-        Scene cena = new Scene(root);
         Image icon = new Image("view/imagens/icon_1.png");
         
         tela.setResizable(false);
-        tela.setScene(cena);
+        tela.setScene(new Scene(root));
         tela.setTitle("Introdução");
         tela.getIcons().add(icon);
         tela.show();
