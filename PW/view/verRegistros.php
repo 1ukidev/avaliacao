@@ -11,7 +11,11 @@
     </div>
     <div class="verRegistros-container">
         <?php
-            $dadosBruto = $_POST["dados"];
+            if(isset($_POST["dados"])){
+                $dadosBruto = $_POST["dados"];
+            } else {
+                $dadosBruto = "";
+            }
         /*
             $arr = explode(",", $dadosBruto);
             $dados[] = $arr;
