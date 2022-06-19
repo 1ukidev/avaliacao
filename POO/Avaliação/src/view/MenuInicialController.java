@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class MenuInicialController {
 
@@ -25,20 +26,23 @@ public class MenuInicialController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        fazerEmprestimo.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
+        final Stage stage = (Stage) fazerEmprestimo.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        final Stage stage = (Stage) verEmprestimos.getScene().getWindow();
+        stage.close();
     }
     
     @FXML
     void abrirTutorial(ActionEvent event) throws IOException {
-        tutorial.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
+        final Stage stage = (Stage) tutorial.getScene().getWindow();
+        stage.close();
     }
     
 }

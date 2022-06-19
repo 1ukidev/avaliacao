@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
+import javafx.stage.Stage;
 
 public class TelaTutorialController {
 
@@ -21,20 +22,23 @@ public class TelaTutorialController {
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        Inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+        final Stage stage = (Stage) verEmprestimos.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        final Stage stage = (Stage) verEmprestimos.getScene().getWindow();
+        stage.close();
     }
     
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        verEmprestimos.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
+        final Stage stage = (Stage) verEmprestimos.getScene().getWindow();
+        stage.close();
     }
 
 }

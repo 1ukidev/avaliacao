@@ -13,6 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import model.*;
 
 public class VerEmprestimosController {
@@ -37,14 +38,16 @@ public class VerEmprestimosController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
+        final Stage stage = (Stage) inicio.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        inicio.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+        final Stage stage = (Stage) inicio.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

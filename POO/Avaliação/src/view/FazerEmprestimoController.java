@@ -10,6 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class FazerEmprestimoController {
 
@@ -94,20 +95,23 @@ public class FazerEmprestimoController {
 
     @FXML
     void abrirTelaInicio(ActionEvent event) throws IOException {
-        btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
+        final Stage stage = (Stage) btnEnviar.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        final Stage stage = (Stage) btnEnviar.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void abrirTutorial(ActionEvent event) throws IOException {
-        btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "telaTutorial.fxml", "Tutorial");
+        final Stage stage = (Stage) btnEnviar.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -136,8 +140,9 @@ public class FazerEmprestimoController {
             diaDoUso.getValue()
         );
 
-        btnEnviar.getScene().getWindow().hide();
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        final Stage stage = (Stage) btnEnviar.getScene().getWindow();
+        stage.close();
     }
     
     @FXML
