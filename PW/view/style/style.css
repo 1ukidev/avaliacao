@@ -24,20 +24,15 @@ body {
 
 .container {
     width: 900px;
-    height: 600px;
+    min-height: 600px;
     margin: 20px;
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
 }
 
 @media screen and (max-width: 950px) {
-    doby {
-        display: block;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 120px 10px 10px 10px;
+    body {
+        height: auto;
     }
   }
 
@@ -181,13 +176,14 @@ body {
 
 .fazerRegistros, .verRegistros {
     width: 100%;
-    height: 100%;
+    min-height: 600px;
 }
 
 .fazerRegistros-container {
     display: flex;
     justify-content: space-between;
-    height: 510px;
+    align-items: center;
+    height: 100%;
 }
 
 .img-container {
@@ -247,9 +243,18 @@ body {
 
 .verRegistros-container {
     width: 100%;
-    height: 81vh;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 950px) {
+    .verRegistros-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .registroBox {
@@ -308,6 +313,7 @@ body {
 }
 
 #excluir {
+    z-index: 10;
     position: absolute;
     bottom: 20px;
     left: 20px;

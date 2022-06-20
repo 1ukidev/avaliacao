@@ -8,13 +8,13 @@
     <style>
         .slide-container {
             width: 100%;
-            height: 100%;
+            min-height: 600px;
             background-color: var(--cor-5);
             border-radius: 10px;
         }
         .swiper {
             width: 304px;
-            height: 100%;
+            min-height: 600px;
             padding: 0 58px;
         }
 
@@ -22,7 +22,7 @@
             margin: auto;
             position: relative;
             width: 100%;
-            height: 100%;
+            min-height: 600px;
             z-index: 1;
             display: flex;
             transition-property: transform;
@@ -52,7 +52,7 @@
 
         .slide-wrapper {
             width: 100%;
-            height: 100%;
+            min-height: 400px;
             border-radius: 10px;
             display: -webkit-box;
             display: -ms-flexbox;
