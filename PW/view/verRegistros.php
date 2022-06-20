@@ -37,7 +37,9 @@
                     <input type="checkbox" class="registroBox-checkbox">
                 </div>`);
                 for(let a=0; a<4; a++){
-                    $(".registroBox-texto")[i].append(`<span>${dados[i][a]}</span>`);
+                    let span = document.createElement('span');
+                    span.appendChild(document.createTextNode(dados[i][a]));
+                    document.querySelectorAll(".registroBox-texto")[i].appendChild(span);
                 }
             }
         </script>
