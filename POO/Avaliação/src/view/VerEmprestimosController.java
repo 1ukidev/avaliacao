@@ -103,7 +103,7 @@ public class VerEmprestimosController {
 
     private ObservableList<Emprestimo> emprestimos = FXCollections.<Emprestimo>observableArrayList();
 
-    void criarEmprestimos() {
+    private void criarEmprestimos() {
         for(int i = 0; i < emprestimoC.lista.size(); i++) {
             emprestimos.add(new Emprestimo(
                     emprestimoC.lista.get(i).getProfessor(),
