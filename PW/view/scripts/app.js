@@ -8,6 +8,11 @@ function mudarTela(url){
     })
 }
 
+$("#menuInicio").click((e) => {
+    e.preventDefault();
+    mudarTela("telaInicio.php");
+})
+
 $("#fazerRegistros").click((e) => {
     e.preventDefault();
     mudarTela("fazerRegistros.php");
@@ -22,6 +27,11 @@ $("#verRegistros").click((e) => {
     e.preventDefault();
     mudarTela("verRegistros.php");
 });
+
+$("#ajuda").click((e) => {
+    e.preventDefault();
+    mudarTela("telaTutorial.php");
+})
 
 $("#btn1").click((e) => {
     e.preventDefault();
