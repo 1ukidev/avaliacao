@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuInicialController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
+         <children>
+            <Hyperlink fx:id="fazerEmprestimo" layoutX="396.0" layoutY="20.0" onAction="#abrirFazerEmprestimo" text="Fazer empréstimo" textFill="WHITE" />
+            <ImageView fitHeight="65.0" fitWidth="70.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../icon%201.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="tutorial" layoutX="521.0" layoutY="20.0" onAction="#abrirTutorial" text="Tutorial" textFill="WHITE" />
+            <ImageView fitHeight="65.0" fitWidth="76.0" layoutY="-4.0">
+               <image>
+                  <Image url="@imagens/icon%201.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="verEmprestimos" layoutX="275.0" layoutY="20.0" onAction="#abrirVerEmprestimos" text="Ver empréstimos" textFill="WHITE" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="448.0" fitWidth="600.0" layoutY="7.0">
+         <image>
+            <Image url="@imagens/Rectangle.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
