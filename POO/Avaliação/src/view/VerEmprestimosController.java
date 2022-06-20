@@ -27,6 +27,7 @@ public class VerEmprestimosController {
 
     EmprestimoC emprestimoC = EmprestimoC.getInstancia();
     Funcoes funcoes = Funcoes.getInstancia();
+    private ObservableList<Emprestimo> emprestimos = FXCollections.<Emprestimo>observableArrayList();
 
     @FXML
     private Hyperlink fazerEmprestimo;
@@ -55,6 +56,18 @@ public class VerEmprestimosController {
         funcoes.mudarTela(event, "menuInicial.fxml", "Menu inicial");
         final Stage stage = (Stage) inicio.getScene().getWindow();
         stage.close();
+    }
+
+    private void criarEmprestimos() {
+        for(int i = 0; i < emprestimoC.lista.size(); i++) {
+            emprestimos.add(new Emprestimo(
+                    emprestimoC.lista.get(i).getProfessor(),
+                    emprestimoC.lista.get(i).getEquipamento(),
+                    emprestimoC.lista.get(i).getHorarioEntrega(),
+                    emprestimoC.lista.get(i).getDiaDoUso()
+                )
+            );
+        }
     }
 
     @FXML
@@ -99,20 +112,6 @@ public class VerEmprestimosController {
         tabela.getColumns().add(equipamento);
         tabela.getColumns().add(horarioEntrega);
         tabela.getColumns().add(diaDoUso);
-    }
-
-    private ObservableList<Emprestimo> emprestimos = FXCollections.<Emprestimo>observableArrayList();
-
-    private void criarEmprestimos() {
-        for(int i = 0; i < emprestimoC.lista.size(); i++) {
-            emprestimos.add(new Emprestimo(
-                    emprestimoC.lista.get(i).getProfessor(),
-                    emprestimoC.lista.get(i).getEquipamento(),
-                    emprestimoC.lista.get(i).getHorarioEntrega(),
-                    emprestimoC.lista.get(i).getDiaDoUso()
-                )
-            );
-        }
     }
 
 }
