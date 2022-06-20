@@ -1,7 +1,7 @@
 # Estrutura do projeto
 
 ```
-├── POO --> Pasta onde ficará tudo relacionado a POO
+├── POO
 │   └── Avaliação
 │       ├── bin
 │       ├── lib
@@ -10,7 +10,7 @@
 │           ├── model
 │           └── view
 │               └── imagens
-└── PW --> Pasta onde ficará tudo relacionado a PW
+└── PW
     ├── control
     ├── model
     └── view
