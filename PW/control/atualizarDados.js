@@ -12,7 +12,6 @@ $("#fazendoRegistros").click((e) => {
         processData: false,
         contentType: false,
         success: (e) => {
-            //alertify.success('registro feito com sucesso');
             $(".container").html(e);
         }
     })

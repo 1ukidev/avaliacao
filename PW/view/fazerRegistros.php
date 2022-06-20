@@ -76,6 +76,5 @@
     </div>
 </div>
 <script src="scripts/jquery.js"></script>
-<script src="scripts/alertify.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="../control/atualizarDados.js"></script>

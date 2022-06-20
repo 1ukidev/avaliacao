@@ -47,5 +47,4 @@
     </div>
 </div>
 <script src="scripts/jquery.js"></script>
-<script src="scripts/alertify.min.js"></script>
 <script src="scripts/app.js"></script>
