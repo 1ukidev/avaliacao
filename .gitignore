@@ -25,3 +25,4 @@ hs_err_pid*
 # others
 *.so
 launch.json
+*.ser
