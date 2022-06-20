@@ -26,14 +26,14 @@ public class MenuInicialController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
+        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer empréstimo");
         final Stage stage = (Stage) fazerEmprestimo.getScene().getWindow();
         stage.close();
     }
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver empréstimos");
         final Stage stage = (Stage) verEmprestimos.getScene().getWindow();
         stage.close();
     }

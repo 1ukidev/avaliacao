@@ -12,12 +12,12 @@
    <children>
       <AnchorPane layoutX="82.0" layoutY="105.0" prefHeight="230.0" prefWidth="0.0" style="-fx-background-color: #486500;">
          <children>
-            <Text fill="WHITE" layoutX="42.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique em &quot;Ver emprestimos&quot;, para visualizar a tela de materiais alugados." textAlignment="CENTER" wrappingWidth="157.0">
+            <Text fill="WHITE" layoutX="42.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique em &quot;Ver empréstimos&quot;, para visualizar a tela de materiais alugados." textAlignment="CENTER" wrappingWidth="157.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="234.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Em &quot;Fazer emprestimo&quot; você poderá agendar algum material disponível." textAlignment="CENTER" wrappingWidth="157.0">
+            <Text fill="WHITE" layoutX="234.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Em &quot;Fazer empréstimo&quot; você poderá agendar algum material disponível." textAlignment="CENTER" wrappingWidth="157.0">
                <font>
                   <Font size="16.0" />
                </font>
@@ -40,14 +40,14 @@
       </ImageView>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verEmprestimos" layoutX="277.0" layoutY="19.0" onAction="#abrirVerEmprestimos" text="Ver emprestimos" textFill="WHITE" />
+            <Hyperlink fx:id="verEmprestimos" layoutX="277.0" layoutY="19.0" onAction="#abrirVerEmprestimos" text="Ver empréstimos" textFill="WHITE" />
             <Hyperlink fx:id="Inicio" layoutX="522.0" layoutY="19.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>
                   <Image url="@imagens/icon%201.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="fazerEmprestimo" layoutX="396.0" layoutY="19.0" onAction="#abrirFazerEmprestimo" text="Fazer emprestimo" textFill="WHITE" />
+            <Hyperlink fx:id="fazerEmprestimo" layoutX="396.0" layoutY="19.0" onAction="#abrirFazerEmprestimo" text="Fazer empréstimo" textFill="WHITE" />
          </children>
       </Pane>
    </children>

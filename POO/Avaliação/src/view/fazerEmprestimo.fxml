@@ -13,7 +13,7 @@
    <children>
       <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #5C8001;">
          <children>
-            <Hyperlink fx:id="verEmprestimos" layoutX="332.0" layoutY="18.0" onAction="#abrirVerEmprestimos" text="Ver emprestimos" textFill="WHITE" />
+            <Hyperlink fx:id="verEmprestimos" layoutX="332.0" layoutY="18.0" onAction="#abrirVerEmprestimos" text="Ver empréstimos" textFill="WHITE" />
             <Hyperlink fx:id="Inicio" layoutX="457.0" layoutY="18.0" onAction="#abrirTelaInicio" text="Inicio" textFill="WHITE" />
             <ImageView fitHeight="65.0" fitWidth="74.0" layoutY="-4.0">
                <image>

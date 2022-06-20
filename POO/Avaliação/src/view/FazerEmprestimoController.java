@@ -108,7 +108,7 @@ public class FazerEmprestimoController {
 
     @FXML
     void abrirVerEmprestimos(ActionEvent event) throws IOException {
-        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver empréstimos");
         final Stage stage = (Stage) btnEnviar.getScene().getWindow();
         stage.close();
     }
@@ -151,7 +151,7 @@ public class FazerEmprestimoController {
         out.writeObject(emprestimoC);
         out.close();
 
-        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
+        funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver empréstimos");
         final Stage stage = (Stage) btnEnviar.getScene().getWindow();
         stage.close();
     }
@@ -163,7 +163,7 @@ public class FazerEmprestimoController {
             emprestimoC = (EmprestimoC) in.readObject();
             in.close();
         } catch (IOException e) {
-            System.out.println("Nenhum arquivo de emprestimos encontrado");
+            System.out.println("Nenhum arquivo de empréstimos encontrado");
         }
         
         adicionarProfessores();

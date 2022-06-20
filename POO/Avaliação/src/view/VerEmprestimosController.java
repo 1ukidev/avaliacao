@@ -45,7 +45,7 @@ public class VerEmprestimosController {
 
     @FXML
     void abrirFazerEmprestimo(ActionEvent event) throws IOException {
-        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer emprestimo");
+        funcoes.mudarTela(event, "fazerEmprestimo.fxml", "Fazer empréstimo");
         final Stage stage = (Stage) inicio.getScene().getWindow();
         stage.close();
     }
@@ -69,7 +69,7 @@ public class VerEmprestimosController {
             out.writeObject(emprestimoC);
             out.close();
         } catch (Exception e) {
-            funcoes.alertaErro("Selecione algum emprestimo para remover");
+            funcoes.alertaErro("Selecione algum empréstimo para remover");
         }
     }
 
@@ -80,7 +80,7 @@ public class VerEmprestimosController {
             emprestimoC = (EmprestimoC) in.readObject();
             in.close();
         } catch (IOException e) {
-            System.out.println("Nenhum arquivo de emprestimos encontrado");
+            System.out.println("Nenhum arquivo de empréstimos encontrado");
         }
 
         TableColumn<Emprestimo, String> professor = new TableColumn<Emprestimo, String>("Professor");
