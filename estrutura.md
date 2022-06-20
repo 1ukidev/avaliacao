@@ -8,7 +8,8 @@
 │       └── src
 │           ├── control
 │           ├── model
-│           └── view 
+│           └── view
+│               └── imagens
 └── PW --> Pasta onde ficará tudo relacionado a PW
     ├── control
     ├── model
