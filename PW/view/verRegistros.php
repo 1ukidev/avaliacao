@@ -43,7 +43,6 @@
         </script>
     <button id="excluir">excluir</button>
     </div>
-    <img src="imagens/gear-solid 1.png" alt="configurações" id="iconConfig">
 </div>
 <script src="scripts/jquery.js"></script>
 <script src="scripts/alertify.min.js"></script>
