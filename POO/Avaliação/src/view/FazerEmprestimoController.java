@@ -1,6 +1,12 @@
 package view;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import control.EmprestimoC;
 import javafx.event.ActionEvent;
@@ -115,8 +121,8 @@ public class FazerEmprestimoController {
     }
 
     @FXML
-    void enviar(ActionEvent event) throws IOException {
-        if (nomeDoProfessor.getValue() == null ||
+    void enviar(ActionEvent event) throws IOException, ClassNotFoundException {
+        if(nomeDoProfessor.getValue() == null ||
                 equipamento.getValue() == null ||
                 horarioEntrega.getValue() == null ||
                 diaDoUso.getValue() == null) {
@@ -124,15 +130,15 @@ public class FazerEmprestimoController {
             return;
         }
 
-        for (int i = 0; i < EmprestimoC.getInstancia().lista.size(); i++) {
-            if (equipamento.getValue() == emprestimoC.lista.get(i).getEquipamento() &&
+        for(int i = 0; i < emprestimoC.lista.size(); i++) {
+            if(equipamento.getValue() == emprestimoC.lista.get(i).getEquipamento() &&
                     horarioEntrega.getValue() == emprestimoC.lista.get(i).getHorarioEntrega() &&
                     diaDoUso.getValue() == emprestimoC.lista.get(i).getDiaDoUso()) {
                 funcoes.alertaErro("Equipamento já está emprestado!");
                 return;
             }
         }
-
+        
         emprestimoC.adicionarEmprestimo(
             nomeDoProfessor.getValue(),
             equipamento.getValue(),
@@ -140,13 +146,26 @@ public class FazerEmprestimoController {
             diaDoUso.getValue()
         );
 
+        ObjectOutput out = null;
+        out = new ObjectOutputStream(new FileOutputStream("emprestimoC.ser"));
+        out.writeObject(emprestimoC);
+        out.close();
+
         funcoes.mudarTela(event, "verEmprestimos.fxml", "Ver emprestimos");
         final Stage stage = (Stage) btnEnviar.getScene().getWindow();
         stage.close();
     }
     
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException, ClassNotFoundException {
+        try {
+            ObjectInput in = new ObjectInputStream(new FileInputStream("emprestimoC.ser"));
+            emprestimoC = (EmprestimoC) in.readObject();
+            in.close();
+        } catch (IOException e) {
+            System.out.println("Nenhum arquivo de emprestimos encontrado");
+        }
+        
         adicionarProfessores();
         adicionarDias();
         adicionarEquipamentos();

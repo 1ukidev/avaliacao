@@ -1,10 +1,11 @@
 package control;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.Emprestimo;
 
-public class EmprestimoC {
+public class EmprestimoC implements Serializable {
     private static EmprestimoC instancia = null;
 
     public static EmprestimoC getInstancia() {
@@ -13,7 +14,7 @@ public class EmprestimoC {
         }
         return instancia;
     }
-
+    
     public ArrayList<Emprestimo> lista = new ArrayList<Emprestimo>();
     
     public void adicionarEmprestimo(String professor, String equipamento, String horarioEntrega, String diaDoUso) {

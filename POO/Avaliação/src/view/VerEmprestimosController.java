@@ -1,6 +1,13 @@
 package view;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import control.EmprestimoC;
 import javafx.collections.FXCollections;
@@ -54,15 +61,28 @@ public class VerEmprestimosController {
     void removerEmprestimo(ActionEvent event) {
         try {
             emprestimoC.lista.remove(tabela.getSelectionModel().getSelectedIndex());
-            emprestimos.remove(tabela.getSelectionModel().getSelectedIndex());
+            emprestimos.remove(tabela.getSelectionModel().getSelectedIndex());            
             tabela.refresh();
+
+            ObjectOutput out = null;
+            out = new ObjectOutputStream(new FileOutputStream("emprestimoC.ser"));
+            out.writeObject(emprestimoC);
+            out.close();
         } catch (Exception e) {
             funcoes.alertaErro("Selecione algum emprestimo para remover");
         }
     }
 
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException, FileNotFoundException, ClassNotFoundException {
+        try {
+            ObjectInput in = new ObjectInputStream(new FileInputStream("emprestimoC.ser"));
+            emprestimoC = (EmprestimoC) in.readObject();
+            in.close();
+        } catch (IOException e) {
+            System.out.println("Nenhum arquivo de emprestimos encontrado");
+        }
+
         TableColumn<Emprestimo, String> professor = new TableColumn<Emprestimo, String>("Professor");
         TableColumn<Emprestimo, String> equipamento = new TableColumn<Emprestimo, String>("Equipamento");
         TableColumn<Emprestimo, String> horarioEntrega = new TableColumn<Emprestimo, String>("Horário de uso");
